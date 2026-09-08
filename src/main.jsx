@@ -9,6 +9,14 @@ import {
   Code2,
   Layers3,
   Sparkles,
+  FileCode2,
+  Braces,
+  Palette,
+  Database,
+  Server,
+  GitBranch,
+  Container,
+  Terminal,
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -264,12 +272,35 @@ function App() {
                 <h3>Frontend Development</h3>
 
                 <div className="skill-list">
-                  <span>React.js</span>
-                  <span>Next.js</span>
-                  <span>JavaScript</span>
-                  <span>TypeScript</span>
-                  <span>HTML</span>
-                  <span>CSS</span>
+                  <div className="skill-item">
+                    <Code2 size={28} />
+                    <span>React.js</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Layers3 size={28} />
+                    <span>Next.js</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Braces size={28} />
+                    <span>JavaScript</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <FileCode2 size={28} />
+                    <span>TypeScript</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <FileCode2 size={28} />
+                    <span>HTML</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Palette size={28} />
+                    <span>CSS</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -283,12 +314,35 @@ function App() {
                 <h3>Interface & Animation</h3>
 
                 <div className="skill-list">
-                  <span>GSAP</span>
-                  <span>Swiper</span>
-                  <span>Tailwind CSS</span>
-                  <span>Bootstrap</span>
-                  <span>Ant Design</span>
-                  <span>Responsive Design</span>
+                  <div className="skill-item">
+                    <Sparkles size={28} />
+                    <span>GSAP</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Layers3 size={28} />
+                    <span>Swiper</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Palette size={28} />
+                    <span>Tailwind CSS</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Palette size={28} />
+                    <span>Bootstrap</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Layers3 size={28} />
+                    <span>Ant Design</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Code2 size={28} />
+                    <span>Responsive Design</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -302,11 +356,30 @@ function App() {
                 <h3>Backend Development</h3>
 
                 <div className="skill-list">
-                  <span>Laravel</span>
-                  <span>PHP</span>
-                  <span>Node.js</span>
-                  <span>Express.js</span>
-                  <span>REST API</span>
+                  <div className="skill-item">
+                    <Server size={28} />
+                    <span>Laravel</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <FileCode2 size={28} />
+                    <span>PHP</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Server size={28} />
+                    <span>Node.js</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Server size={28} />
+                    <span>Express.js</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Braces size={28} />
+                    <span>REST API</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -320,8 +393,15 @@ function App() {
                 <h3>Database</h3>
 
                 <div className="skill-list">
-                  <span>MySQL(basic)</span>
-                  <span>PostgreSQL(basic)</span>
+                  <div className="skill-item">
+                    <Database size={28} />
+                    <span>MySQL</span>
+                  </div>
+
+                  <div className="skill-item">
+                    <Database size={28} />
+                    <span>PostgreSQL</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -336,12 +416,35 @@ function App() {
               <h3>Development & Deployment</h3>
 
               <div className="skill-list">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Jenkins(basic)</span>
-                <span>Docker(basic)</span>
-                <span>Linux(basic)</span>
-                <span>Apache(basic)</span>
+                <div className="skill-item">
+                  <GitBranch size={28} />
+                  <span>Git</span>
+                </div>
+
+                <div className="skill-item">
+                  <Github size={28} />
+                  <span>GitHub</span>
+                </div>
+
+                <div className="skill-item">
+                  <Terminal size={28} />
+                  <span>Jenkins</span>
+                </div>
+
+                <div className="skill-item">
+                  <Container size={28} />
+                  <span>Docker</span>
+                </div>
+
+                <div className="skill-item">
+                  <Terminal size={28} />
+                  <span>Linux</span>
+                </div>
+
+                <div className="skill-item">
+                  <Server size={28} />
+                  <span>Apache</span>
+                </div>
               </div>
             </div>
           </div>
@@ -355,7 +458,6 @@ function App() {
               <span>LARAVEL</span>
               <span>NODE.JS</span>
               <span>MYSQL</span>
-
               <span>REACT</span>
               <span>JAVASCRIPT</span>
               <span>GSAP</span>
@@ -363,6 +465,103 @@ function App() {
               <span>LARAVEL</span>
               <span>NODE.JS</span>
               <span>MYSQL</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="experience section" id="experience">
+          <div className="experience-top">
+            <div className="section-label reveal">( 03 — EXPERIENCE )</div>
+
+            <p className="experience-intro reveal">
+              Practical experience working as a Front-End Engineer, developing
+              interfaces, maintaining existing codebases, and collaborating on
+              web application projects.
+            </p>
+          </div>
+
+          <div className="experience-main">
+            <div className="experience-title reveal">
+              <h2>
+                Where I gained
+                <br />
+                <i>real-world experience.</i>
+              </h2>
+            </div>
+
+            <div className="experience-list">
+              <article className="experience-card reveal">
+                <div className="experience-meta">
+                  <span className="experience-number">01</span>
+
+                  <span className="experience-period">4 MONTHS</span>
+                </div>
+
+                <div className="experience-content">
+                  <span className="experience-role-label">
+                    FRONT-END ENGINEER
+                  </span>
+
+                  <h3>Junior Front-End Engineer</h3>
+
+                  <p className="experience-description">
+                    Worked on developing and maintaining web application
+                    interfaces, focusing on responsive layouts, component
+                    implementation, and improving existing frontend code.
+                  </p>
+
+                  <div className="experience-points">
+                    <div>
+                      <span>#1</span>
+                      <p>
+                        Developed and improved responsive user interfaces using
+                        modern frontend technologies.
+                      </p>
+                    </div>
+
+                    <div>
+                      <span>#2</span>
+                      <p>
+                        Continued and refactored existing codebases after
+                        previous developers left the project.
+                      </p>
+                    </div>
+
+                    <div>
+                      <span>#3</span>
+                      <p>
+                        Worked on dashboard and landing page development based
+                        on project requirements.
+                      </p>
+                    </div>
+
+                    <div>
+                      <span>#4</span>
+                      <p>
+                        Collaborated with the team and adapted to existing
+                        project structures and workflows.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="experience-tech">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>React.js</span>
+                    <span>Next.Js</span>
+                    <span>VueJs</span>
+                    <span>CSS</span>
+                    <span>SASS</span>
+                    <span>Ant Design</span>
+                    <span>Slicing Design To Code</span>
+                    <span>Responsive Css</span>
+                    <span>REST API</span>
+                    <span>Echarts</span>
+                    <span>Git</span>
+                    <span>Github</span>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -456,7 +655,7 @@ function App() {
           >
             {projects.map((p) => (
               <SwiperSlide key={p.number}>
-                <div className={"slide-card " + p.color}>
+                <div className={"slide-card"}>
                   <img src={p.image} alt={p.title} className="slide-image" />
 
                   <div className="slide-overlay"></div>

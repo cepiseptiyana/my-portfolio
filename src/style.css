@@ -409,31 +409,71 @@ body {
 .skill-list {
   grid-column: 2;
 
-  display: flex;
+  display: grid;
 
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
 
-  align-content: flex-start;
-
-  gap: 10px;
+  gap: 12px;
 
   padding-top: 20px;
 }
 
-.skill-list span {
-  font-family: "DM Mono", monospace;
+.skill-item {
+  min-height: 100px;
 
-  font-size: 11px;
+  display: flex;
 
-  padding: 11px 15px;
+  flex-direction: column;
 
-  border-radius: 50px;
+  align-items: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  justify-content: center;
+
+  gap: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
 
   color: #bdbdbd;
 
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+
+  cursor: default;
+}
+
+.skill-item svg {
+  color: var(--lime);
+
+  transition: transform 0.3s ease;
+}
+
+.skill-item span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  text-align: center;
+
+  color: #bdbdbd;
+}
+
+.skill-item:hover {
+  background: var(--lime);
+
+  border-color: var(--lime);
+
+  transform: translateY(-5px);
+}
+
+.skill-item:hover span {
+  color: #111;
+}
+
+.skill-item:hover svg {
+  color: #111;
+
+  transform: scale(1.15);
 }
 
 .skill-list span:hover {
@@ -503,6 +543,228 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience {
+  background: #080808;
+  color: white;
+  overflow: hidden;
+}
+
+/* TOP */
+
+.experience-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 40px;
+
+  margin-bottom: 100px;
+}
+
+.experience-intro {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* TITLE */
+
+.experience-main {
+  display: grid;
+
+  grid-template-columns: 1fr 1.4fr;
+
+  gap: 8vw;
+}
+
+.experience-title h2 {
+  margin: 0;
+
+  font-size: clamp(45px, 5vw, 85px);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.experience-title i {
+  font-family: "Playfair Display", serif;
+
+  font-weight: 500;
+
+  color: var(--lime);
+}
+
+/* EXPERIENCE LIST */
+
+.experience-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* CARD */
+
+.experience-card {
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  gap: 35px;
+
+  padding: 45px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* META */
+
+.experience-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.experience-number {
+  font-family: "DM Mono", monospace;
+
+  font-size: 12px;
+
+  color: var(--lime);
+}
+
+.experience-period {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #666;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  letter-spacing: 1px;
+}
+
+/* CONTENT */
+
+.experience-role-label {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: #777;
+}
+
+.experience-content h3 {
+  margin: 15px 0 20px;
+
+  font-size: clamp(30px, 3vw, 48px);
+
+  letter-spacing: -0.05em;
+}
+
+.experience-description {
+  max-width: 620px;
+
+  color: #999;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+}
+
+/* EXPERIENCE POINTS */
+
+.experience-points {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-points > div {
+  padding: 25px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-points > div:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-points span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: var(--lime);
+}
+
+.experience-points p {
+  margin: 35px 0 0;
+
+  color: #aaa;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* TECHNOLOGIES */
+
+.experience-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.experience-tech span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: #aaa;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  padding: 9px 14px;
+
+  border-radius: 50px;
+
+  transition: 0.3s ease;
+}
+
+.experience-tech span:hover {
+  background: var(--lime);
+
+  color: #111;
+
+  border-color: var(--lime);
+
+  transform: translateY(-3px);
+}
 .work {
   padding-top: 140px;
 }
@@ -523,7 +785,7 @@ body {
 }
 .project-row {
   display: grid;
-  grid-template-columns: 70px 280px 1fr 58px;
+  grid-template-columns: 70px 400px 1fr 58px;
   gap: 35px;
   align-items: center;
   padding: 26px 0;
@@ -534,11 +796,26 @@ body {
   color: #777;
 }
 .project-art {
-  height: 180px;
+  width: 400px;
+  height: 220px;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, #28202f, #161616);
+  background: #151515;
   position: relative;
+}
+
+.project-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+
+  transition: transform 0.6s ease;
+}
+
+.project-row:hover .project-art img {
+  transform: scale(1.03);
 }
 /* .project-art:after {
   content: "";
@@ -551,16 +828,6 @@ body {
   background: #8c63ff;
   filter: blur(3px);
 } */
-.orange .project-art:after,
-.slide-card.orange .slide-shape {
-  background: var(--orange);
-}
-.blue .project-art:after {
-  background: #39a4ff;
-}
-.green .project-art:after {
-  background: var(--lime);
-}
 /* .art-window {
   position: absolute;
   inset: 20px;
@@ -672,33 +939,83 @@ body {
   overflow: hidden;
   background: #211b2c;
 }
-.slide-card.orange {
-  background: #34201b;
+.slide-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top center;
+
+  display: block;
+
+  transition: transform 0.7s ease;
 }
-.slide-card.blue {
-  background: #142b3d;
+.slide-card:hover .slide-image {
+  transform: scale(1.05);
 }
-.slide-card.green {
-  background: #26351b;
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    rgba(0, 0, 0, 0.05) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+
+  z-index: 1;
 }
+
 .slide-card span {
-  font: 11px "DM Mono";
-  position: relative;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+
+  color: white;
+
   z-index: 2;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+
+  padding: 7px 10px;
+
+  border-radius: 20px;
 }
 .slide-card h3 {
   position: absolute;
-  bottom: 45px;
-  font-size: 38px;
-  letter-spacing: -0.05em;
+
+  left: 30px;
+  bottom: 42px;
+
   margin: 0;
+
+  font-size: 38px;
+
+  letter-spacing: -0.05em;
+
+  color: white;
+
   z-index: 2;
 }
+
 .slide-card p {
   position: absolute;
-  bottom: 20px;
-  color: #bbb;
+
+  left: 30px;
+  bottom: 18px;
+
+  margin: 0;
+
+  color: #ccc;
+
   font-size: 11px;
+
   z-index: 2;
 }
 .slide-shape {
@@ -949,13 +1266,102 @@ footer {
     font-size: 30px;
   }
 
+  /* =========================
+   EXPERIENCE MOBILE
+  ========================= */
+
+  .experience-top {
+    flex-direction: column;
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+  }
+
+  .experience-intro {
+    max-width: 100%;
+
+    font-size: 13px;
+  }
+
+  .experience-main {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .experience-title h2 {
+    font-size: 42px;
+  }
+
+  /* CARD */
+
+  .experience-card {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  /* META */
+
+  .experience-meta {
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
+  .experience-period {
+    writing-mode: horizontal-tb;
+
+    transform: none;
+  }
+
+  /* CONTENT */
+
+  .experience-content h3 {
+    font-size: 32px;
+
+    margin-top: 12px;
+  }
+
+  .experience-description {
+    font-size: 13px;
+
+    margin-bottom: 30px;
+  }
+
+  /* POINTS */
+
+  .experience-points {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-points > div:nth-child(odd) {
+    border-right: none;
+  }
+
+  .experience-points > div {
+    padding: 22px 0;
+  }
+
+  .experience-points p {
+    margin-top: 20px;
+
+    font-size: 12px;
+  }
+
   .project-row {
     grid-template-columns: 35px 1fr;
     gap: 15px;
   }
   .project-art {
-    grid-column: 2;
-    height: 150px;
+    height: 180px;
+  }
+
+  .project-row:hover .project-art img {
+    transform: scale(1.03);
   }
   .project-info {
     grid-column: 2;
