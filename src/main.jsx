@@ -37,7 +37,7 @@ const projects = [
     desc: "Full-featured job portal connecting candidates with opportunities through a practical recruitment workflow.",
     tags: ["Laravel", "MySQL", "Blade"],
     github: "https://github.com/cepiseptiyana/job_career",
-    image: "/images/job_career.webp",
+    image: `${import.meta.env.BASE_URL}images/job_career.webp`,
   },
   {
     number: "02",
@@ -47,7 +47,7 @@ const projects = [
     desc: "Motion-first portfolio experience focused on storytelling, performance and memorable interactions.",
     tags: ["React", "GSAP", "Swiper"],
     github: "https://github.com/cepiseptiyana/my-portfolio",
-    image: "/images/portfolio.png",
+    image: `${import.meta.env.BASE_URL}images/portfolio.png`,
   },
 ];
 
@@ -232,12 +232,11 @@ function App() {
                 </a>
 
                 <a
-                  href="/Cepi-Septiyana-CV.pdf"
-                  download
+                  href={`${import.meta.env.BASE_URL}cv/cv_cepi_septiyana.pdf`}
+                  download="cv_cepi_septiyana.pdf"
                   className="resume-btn"
                 >
-                  Download Resume
-                  <ArrowDownRight size={17} />
+                  Download Resume <ArrowDownRight size={17} />
                 </a>
               </div>
             </div>
