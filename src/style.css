@@ -183,23 +183,6 @@ body {
   color: #fff;
   /* border: 1px solid #444; */
 }
-.scroll-note {
-  position: absolute;
-  left: 5vw;
-  bottom: 58px;
-  font: 10px "DM Mono";
-  letter-spacing: 1px;
-  z-index: 3;
-  color: #999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.scroll-note span {
-  width: 48px;
-  height: 1px;
-  background: #777;
-}
 .wave {
   position: absolute;
   left: -5%;
