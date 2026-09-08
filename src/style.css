@@ -91,14 +91,14 @@ body {
 .orb-one {
   width: 32vw;
   height: 32vw;
-  background: #673cff;
+  background: rgb(110, 110, 110);
   right: -8vw;
   top: 14vh;
 }
 .orb-two {
   width: 24vw;
   height: 24vw;
-  background: #d8ff36;
+  background: rgb(209, 209, 209);
   left: -12vw;
   bottom: 9vh;
   opacity: 0.18;
@@ -233,22 +233,17 @@ body {
 }
 
 .resume-btn {
+  min-width: 167px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 12px 18px;
-
   background: var(--primary);
   color: var(--paper);
-
   border-radius: 999px;
-
   text-decoration: none;
-
   font-size: 12px;
   font-weight: 600;
-
   transition: all 0.3s ease;
 }
 
@@ -402,50 +397,35 @@ body {
 }
 
 .skill-item {
+  min-width: 100px;
   min-height: 100px;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 12px;
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 10px;
-
   color: #bdbdbd;
-
   transition: all 0.3s ease;
-
   cursor: default;
 }
 
 .skill-item svg {
   color: var(--lime);
-
   transition: transform 0.3s ease;
 }
 
 .skill-item span {
   font-family: "DM Mono", monospace;
-
   font-size: 10px;
-
   text-align: center;
-
   color: #bdbdbd;
 }
 
 .skill-item:hover {
   background: var(--lime);
-
   border-color: var(--lime);
-
   transform: translateY(-5px);
 }
 
@@ -455,17 +435,13 @@ body {
 
 .skill-item:hover svg {
   color: #111;
-
   transform: scale(1.15);
 }
 
 .skill-list span:hover {
   background: var(--lime);
-
   color: #111;
-
   border-color: var(--lime);
-
   transform: translateY(-3px);
 }
 
@@ -475,45 +451,31 @@ body {
 
 .skills-marquee {
   margin-top: 100px;
-
   width: 100%;
-
   overflow: hidden;
-
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
   padding: 25px 0;
 }
 
 .marquee-track {
   display: flex;
-
   width: max-content;
-
   gap: 50px;
-
   animation: marquee 25s linear infinite;
 }
 
 .marquee-track span {
   font-size: clamp(25px, 4vw, 55px);
-
   font-weight: 700;
-
   letter-spacing: -0.05em;
-
   color: transparent;
-
   -webkit-text-stroke: 1px #555;
-
   white-space: nowrap;
 }
 
 .marquee-track span:nth-child(odd) {
   color: var(--lime);
-
   -webkit-text-stroke: 0;
 }
 
@@ -543,49 +505,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   gap: 40px;
-
   margin-bottom: 100px;
 }
 
 .experience-intro {
   max-width: 400px;
-
   margin: 0;
-
   color: #888;
-
   font-size: 14px;
-
   line-height: 1.8;
 }
 
-/* TITLE */
-
 .experience-main {
   display: grid;
-
   grid-template-columns: 1fr 1.4fr;
-
   gap: 8vw;
 }
 
 .experience-title h2 {
   margin: 0;
-
   font-size: clamp(45px, 5vw, 85px);
-
   line-height: 1;
-
   letter-spacing: -0.06em;
 }
 
 .experience-title i {
   font-family: "Playfair Display", serif;
-
   font-weight: 500;
-
   color: var(--lime);
 }
 
@@ -599,13 +546,9 @@ body {
 
 .experience-card {
   display: grid;
-
   grid-template-columns: 100px 1fr;
-
   gap: 35px;
-
   padding: 45px 0;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -613,31 +556,22 @@ body {
 
 .experience-meta {
   display: flex;
-
   flex-direction: column;
-
   gap: 20px;
 }
 
 .experience-number {
   font-family: "DM Mono", monospace;
-
   font-size: 12px;
-
   color: var(--lime);
 }
 
 .experience-period {
   font-family: "DM Mono", monospace;
-
   font-size: 10px;
-
   color: #666;
-
   writing-mode: vertical-rl;
-
   transform: rotate(180deg);
-
   letter-spacing: 1px;
 }
 
@@ -645,31 +579,22 @@ body {
 
 .experience-role-label {
   font-family: "DM Mono", monospace;
-
   font-size: 10px;
-
   letter-spacing: 1px;
-
   color: #777;
 }
 
 .experience-content h3 {
   margin: 15px 0 20px;
-
   font-size: clamp(30px, 3vw, 48px);
-
   letter-spacing: -0.05em;
 }
 
 .experience-description {
   max-width: 620px;
-
   color: #999;
-
   font-size: 14px;
-
   line-height: 1.8;
-
   margin-bottom: 40px;
 }
 
@@ -677,15 +602,12 @@ body {
 
 .experience-points {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .experience-points > div {
   padding: 25px;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -695,9 +617,7 @@ body {
 
 .experience-points span {
   font-family: "DM Mono", monospace;
-
   font-size: 10px;
-
   color: var(--lime);
 }
 
@@ -1210,21 +1130,16 @@ footer {
 
   .skill-list {
     display: flex;
-
     flex-wrap: wrap;
-
+    justify-content: center;
     gap: 8px;
-
     padding: 0;
-
     margin: 0;
   }
 
   .skill-list span {
     font-size: 10px;
-
     padding: 9px 12px;
-
     white-space: nowrap;
   }
 
@@ -1232,12 +1147,9 @@ footer {
 
   .skills-marquee {
     margin-top: 55px;
-
     margin-left: -24px;
     margin-right: -24px;
-
     width: calc(100% + 48px);
-
     padding: 18px 0;
   }
 
@@ -1338,24 +1250,30 @@ footer {
   .project-row {
     grid-template-columns: 35px 1fr;
     gap: 15px;
-  }
-  .project-art {
-    height: 180px;
+    position: relative;
+    padding: 30px 0;
   }
 
-  .project-row:hover .project-art img {
-    transform: scale(1.03);
+  .project-row {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    position: relative;
+    padding: 30px 0;
   }
+
+  .project-art {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
   .project-info {
     grid-column: 2;
   }
+
   .round-link {
     position: absolute;
     right: 5vw;
-  }
-  .project-row {
-    position: relative;
-    padding: 30px 0;
   }
   .process-grid {
     grid-template-columns: 1fr 1fr;
