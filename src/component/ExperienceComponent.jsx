@@ -29,7 +29,9 @@ export default function ExperienceComponent() {
             </div>
 
             <div className="experience-content">
-              <span className="experience-role-label">FRONT-END ENGINEER</span>
+              <span className="experience-role-label">
+                FRONT-END ENGINEER - PT SUMMIT GLOBAL TECHNOLOGY
+              </span>
 
               <h3>Junior Front-End Engineer</h3>
 
