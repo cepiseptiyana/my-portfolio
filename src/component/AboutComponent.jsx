@@ -27,7 +27,9 @@ export default function AboutComponent({ Wave: ComponentWave }) {
             </a>
 
             <a
-              href={`${import.meta.env.BASE_URL}cv/cv_cepi_septiyana.pdf`}
+              href={`${
+                import.meta.env.BASE_URL
+              }cv/Cepi_Septiyana_Junior_Fullstack_Developer.pdf`}
               download="cv_cepi_septiyana.pdf"
               className="resume-btn"
             >
