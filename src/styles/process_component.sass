@@ -1,0 +1,31 @@
+.process 
+    background: #101010
+
+    .process-grid 
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        margin-top: 50px
+        border-top: 1px solid g.$line
+
+        .process-card 
+            padding: 30px 25px 30px 0
+            border-right: 1px solid g.$line
+            min-height: 270px
+
+            span 
+                font: 11px "DM Mono"
+                color: g.$lime
+
+            h3 
+                font-size: 25px
+                margin: 65px 0 12px
+
+            p 
+                font-size: 13px
+                line-height: 1.6
+                color: #999
+
+        .process-card:not(:first-child) 
+            padding-left: 25px
+
+

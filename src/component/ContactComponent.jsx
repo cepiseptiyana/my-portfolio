@@ -1,10 +1,11 @@
+import "../styles/contact_component.sass";
 import { ArrowDownRight, Github, Linkedin, Mail } from "lucide-react";
 
 export default function ContactComponent({ Wave: ComponentWave }) {
   return (
     <section className="contact" id="contact">
       <div className="contact-glow"></div>
-      <div className="section-label">( 04 — CONTACT )</div>
+      <div className="section-label">( 06 — CONTACT )</div>
       <h2>
         Have an idea?
         <br />

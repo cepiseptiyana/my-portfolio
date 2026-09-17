@@ -1,0 +1,153 @@
+.skills-section 
+    background: #0d0d0d
+    color: white
+    overflow: hidden
+
+    .skills-header 
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-top: 55px
+        margin-bottom: 80px
+        gap: 50px
+
+        h2 
+            font-size: clamp(45px, 6vw, 90px)
+            line-height: 1
+            letter-spacing: -0.06em
+            margin: 0
+
+            i 
+                font-family: "Playfair Display", serif
+                font-weight: 500
+                color: g.$lime
+
+        p 
+            max-width: 380px
+            color: #8f8f8f
+            font-size: 14px
+            line-height: 1.7
+            margin: 0
+
+    .skills-modern 
+        border-top: 1px solid rgba(255, 255, 255, 0.12)
+
+        .skill-category 
+            display: grid
+            grid-template-columns: 100px minmax(250px, 1fr) 2fr
+            gap: 40px
+            padding: 45px 0
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12)
+            transition: background 0.4s ease, padding 0.4s ease
+
+            &:hover 
+                padding-left: 20px
+                background: rgba(255, 255, 255, 0.02)
+
+            .skill-number 
+                font-family: "DM Mono", monospace
+                font-size: 12px
+                color: g.$lime
+                padding-top: 5px
+
+            .skill-content 
+                grid-column: 2 / 4
+                display: grid
+                grid-template-columns: minmax(250px, 1fr) 2fr
+                gap: 40px
+
+                .skill-label 
+                    font-family: "DM Mono", monospace
+                    font-size: 10px
+                    letter-spacing: 1px
+                    color: #777
+
+                h3
+                    grid-column: 1
+                    font-size: clamp(28px, 3vw, 45px)
+                    letter-spacing: -0.05em
+                    margin: 15px 0 0
+
+                .skill-list 
+                    grid-column: 2
+                    display: grid
+                    grid-template-columns: repeat(3, 1fr)
+                    gap: 12px
+                    padding-top: 20px
+
+                    .skill-item 
+                        min-width: 100px
+                        min-height: 100px
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center
+                        gap: 12px
+                        border: 1px solid rgba(255, 255, 255, 0.12)
+                        border-radius: 10px
+                        color: #bdbdbd
+                        transition: all 0.3s ease
+                        cursor: default
+
+                        svg 
+                            color: g.$lime
+                            transition: transform 0.3s ease
+
+                        span 
+                            font-family: "DM Mono", monospace
+                            font-size: 10px
+                            text-align: center
+                            color: #bdbdbd
+
+                        &:hover 
+                            background: g.$lime
+                            border-color: g.$lime
+                            transform: translateY(-5px)
+
+                        &:hover span 
+                            color: #111
+
+                            &:hover 
+                                background: g.$lime
+                                color: #111
+                                border-color: g.$lime
+                                transform: translateY(-3px)
+
+                        &:hover svg 
+                            color: #111
+                            transform: scale(1.15)
+
+
+    .skills-marquee 
+        margin-top: 100px
+        width: 100%
+        overflow: hidden
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+        padding: 25px 0
+
+    .marquee-track 
+        display: flex
+        width: max-content
+        gap: 50px
+        animation: marquee 25s linear infinite
+
+    .marquee-track span 
+        font-size: clamp(25px, 4vw, 55px)
+        font-weight: 700
+        letter-spacing: -0.05em
+        color: transparent
+        -webkit-text-stroke: 1px #555
+        white-space: nowrap
+
+    .marquee-track span:nth-child(odd) 
+        color: g.$lime
+        -webkit-text-stroke: 0
+
+    @keyframes marquee 
+        from 
+            transform: translateX(0)
+        
+        to 
+            transform: translateX(-50%)
+  

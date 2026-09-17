@@ -1,0 +1,128 @@
+.experience 
+    background: #080808
+    color: white
+    overflow: hidden
+
+    .experience-top 
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 40px
+        margin-bottom: 100px
+
+        .experience-intro 
+            max-width: 400px
+            margin: 0
+            color: #888
+            font-size: 14px
+            line-height: 1.8
+
+    .experience-main 
+        display: grid
+        grid-template-columns: 1fr 1.4fr
+        gap: 8vw
+
+        .experience-title 
+            h2 
+                margin: 0
+                font-size: clamp(45px, 5vw, 85px)
+                line-height: 1
+                letter-spacing: -0.06em
+
+            i 
+                font-family: "Playfair Display", serif
+                font-weight: 500
+                color: g.$lime
+
+
+        .experience-list 
+            border-top: 1px solid rgba(255, 255, 255, 0.15)
+
+            .experience-card 
+                display: grid
+                grid-template-columns: 100px 1fr
+                gap: 35px
+                padding: 45px 0
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+                .experience-meta 
+                    display: flex
+                    flex-direction: column
+                    gap: 20px
+
+                    .experience-number 
+                        font-family: "DM Mono", monospace
+                        font-size: 12px
+                        color: g.$lime
+
+                    .experience-period 
+                        font-family: "DM Mono", monospace
+                        font-size: 10px
+                        color: #666
+                        writing-mode: vertical-rl
+                        transform: rotate(180deg)
+                        letter-spacing: 1px
+
+                .experience-content
+                    .experience-role-label 
+                        font-family: "DM Mono", monospace
+                        font-size: 10px
+                        letter-spacing: 1px
+                        color: #777
+
+                    h3 
+                        margin: 15px 0 20px
+                        font-size: clamp(30px, 3vw, 48px)
+                        letter-spacing: -0.05em
+
+                    .experience-description 
+                        max-width: 620px
+                        color: #999
+                        font-size: 14px
+                        line-height: 1.8
+                        margin-bottom: 40px
+
+
+                    .experience-points 
+                        display: grid
+                        grid-template-columns: 1fr 1fr
+                        border-top: 1px solid rgba(255, 255, 255, 0.1)
+
+                        span 
+                            font-family: "DM Mono", monospace
+                            font-size: 10px
+                            color: g.$lime
+
+                        p 
+                            margin: 35px 0 0
+                            color: #aaa
+                            font-size: 12px
+                            line-height: 1.7
+
+                    .experience-points > div 
+                        padding: 25px
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+                    .experience-points > div:nth-child(odd) 
+                        border-right: 1px solid rgba(255, 255, 255, 0.1)
+
+                    .experience-tech 
+                        display: flex
+                        flex-wrap: wrap
+                        gap: 10px
+                        margin-top: 30px
+
+                        span 
+                            font-family: "DM Mono", monospace
+                            font-size: 10px
+                            color: #aaa
+                            border: 1px solid rgba(255, 255, 255, 0.15)
+                            padding: 9px 14px
+                            border-radius: 50px
+                            transition: 0.3s ease
+
+                            &:hover 
+                                background: g.$lime
+                                color: #111
+                                border-color: g.$lime
+                                transform: translateY(-3px)

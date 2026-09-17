@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import "../styles/project_component.sass";
 
 export default function ProjectComponent() {
   const projects = [
@@ -27,7 +28,7 @@ export default function ProjectComponent() {
   return (
     <section className="work section" id="work">
       <div className="section-head reveal">
-        <div className="section-label">( 02 — SELECTED WORK )</div>
+        <div className="section-label">( 04 — SELECTED WORK )</div>
         <p>
           A selection of projects built with curiosity, detail and modern web
           technologies.

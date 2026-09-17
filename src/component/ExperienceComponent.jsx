@@ -1,10 +1,12 @@
+import "../styles/experience_component.sass";
+
 export default function ExperienceComponent() {
   return (
     <section className="experience section" id="experience">
       <div className="experience-top">
-        <div className="section-label reveal">( 03 — EXPERIENCE )</div>
+        <div className="section-label">( 03 — EXPERIENCE )</div>
 
-        <p className="experience-intro reveal">
+        <p className="experience-intro">
           Practical experience working as a Front-End Engineer, developing
           interfaces, maintaining existing codebases, and collaborating on web
           application projects.
@@ -12,7 +14,7 @@ export default function ExperienceComponent() {
       </div>
 
       <div className="experience-main">
-        <div className="experience-title reveal">
+        <div className="experience-title">
           <h2>
             Where I gained
             <br />
@@ -21,7 +23,7 @@ export default function ExperienceComponent() {
         </div>
 
         <div className="experience-list">
-          <article className="experience-card reveal">
+          <article className="experience-card">
             <div className="experience-meta">
               <span className="experience-number">01</span>
 

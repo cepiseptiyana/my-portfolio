@@ -1,11 +1,12 @@
 import { ArrowDownRight } from "lucide-react";
+import "../styles/hero_component.sass";
 
 export default function HeroComponent({ Wave: ComponentWave }) {
   return (
     <section className="hero" id="home">
       <div className="grid-bg"></div>
-      <div className="orb hero-orb orb-one"></div>
-      <div className="orb hero-orb orb-two"></div>
+      <div className="orb orb-one"></div>
+      <div className="orb orb-two"></div>
       <div className="hero-content">
         <div className="hero-kicker">
           <span></span> CEPI SEPTIYANA · JUNIOR WEB DEVELOPER

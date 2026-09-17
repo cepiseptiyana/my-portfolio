@@ -1,3 +1,5 @@
+import "../styles/process_component.sass";
+
 export default function ProcessComponent() {
   const process = [
     {
@@ -24,10 +26,10 @@ export default function ProcessComponent() {
 
   return (
     <section className="process section">
-      <div className="section-label reveal">( 03 — PROCESS )</div>
+      <div className="section-label">( 05 — PROCESS )</div>
       <div className="process-grid">
         {process.map((data, index) => (
-          <div className="process-card reveal" key={index}>
+          <div className="process-card" key={index}>
             <span>{data.number}</span>
             <h3>{data.title}</h3>
             <p>{data.desc}</p>

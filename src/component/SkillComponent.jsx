@@ -12,13 +12,14 @@ import {
   Container,
   Terminal,
 } from "lucide-react";
+import "../styles/skill_component.sass";
 
 export default function SkillComponent() {
   return (
     <section className="skills-section section" id="skills">
-      <div className="section-label reveal">( 02 — SKILLS )</div>
+      <div className="section-label">( 02 — SKILLS )</div>
 
-      <div className="skills-header reveal">
+      <div className="skills-header">
         <h2>
           Technologies I use
           <br />
@@ -32,7 +33,7 @@ export default function SkillComponent() {
       </div>
 
       <div className="skills-modern">
-        <div className="skill-category reveal">
+        <div className="skill-category">
           <div className="skill-number">01</div>
 
           <div className="skill-content">
@@ -74,7 +75,7 @@ export default function SkillComponent() {
           </div>
         </div>
 
-        <div className="skill-category reveal">
+        <div className="skill-category">
           <div className="skill-number">02</div>
 
           <div className="skill-content">
@@ -116,7 +117,7 @@ export default function SkillComponent() {
           </div>
         </div>
 
-        <div className="skill-category reveal">
+        <div className="skill-category">
           <div className="skill-number">03</div>
 
           <div className="skill-content">
@@ -153,7 +154,7 @@ export default function SkillComponent() {
           </div>
         </div>
 
-        <div className="skill-category reveal">
+        <div className="skill-category">
           <div className="skill-number">04</div>
 
           <div className="skill-content">
@@ -174,45 +175,45 @@ export default function SkillComponent() {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="skill-category reveal">
-        <div className="skill-number">05</div>
+        <div className="skill-category">
+          <div className="skill-number">05</div>
 
-        <div className="skill-content">
-          <span className="skill-label">DEVOPS & TOOLS</span>
+          <div className="skill-content">
+            <span className="skill-label">DEVOPS & TOOLS</span>
 
-          <h3>Development & Deployment</h3>
+            <h3>Development & Deployment</h3>
 
-          <div className="skill-list">
-            <div className="skill-item">
-              <GitBranch size={28} />
-              <span>Git</span>
-            </div>
+            <div className="skill-list">
+              <div className="skill-item">
+                <GitBranch size={28} />
+                <span>Git</span>
+              </div>
 
-            <div className="skill-item">
-              <Github size={28} />
-              <span>GitHub</span>
-            </div>
+              <div className="skill-item">
+                <Github size={28} />
+                <span>GitHub</span>
+              </div>
 
-            <div className="skill-item">
-              <Terminal size={28} />
-              <span>Jenkins</span>
-            </div>
+              <div className="skill-item">
+                <Terminal size={28} />
+                <span>Jenkins</span>
+              </div>
 
-            <div className="skill-item">
-              <Container size={28} />
-              <span>Docker</span>
-            </div>
+              <div className="skill-item">
+                <Container size={28} />
+                <span>Docker</span>
+              </div>
 
-            <div className="skill-item">
-              <Terminal size={28} />
-              <span>Linux</span>
-            </div>
+              <div className="skill-item">
+                <Terminal size={28} />
+                <span>Linux</span>
+              </div>
 
-            <div className="skill-item">
-              <Server size={28} />
-              <span>Apache</span>
+              <div className="skill-item">
+                <Server size={28} />
+                <span>Apache</span>
+              </div>
             </div>
           </div>
         </div>

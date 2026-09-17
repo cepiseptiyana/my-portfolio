@@ -1,3 +1,4 @@
+import "../styles/playground_component.sass";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";

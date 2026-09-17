@@ -1,16 +1,17 @@
 import { ArrowDownRight } from "lucide-react";
+import "../styles/about_component.sass";
 
 export default function AboutComponent({ Wave: ComponentWave }) {
   return (
     <section className="about section" id="about">
-      <div className="section-label reveal">( 01 — ABOUT )</div>
+      <div className="section-label">( 01 — ABOUT )</div>
       <div className="about-layout">
-        <h2 className="display reveal">
+        <h2 className="display">
           Building modern web solutions
           <br />
           <i>with purpose and precision.</i>
         </h2>
-        <div className="about-copy reveal">
+        <div className="about-copy">
           <p>
             I am a Junior Web Developer with experience as a Front-End Engineer,
             focused on developing web applications and responsive user
@@ -29,7 +30,7 @@ export default function AboutComponent({ Wave: ComponentWave }) {
             <a
               href={`${
                 import.meta.env.BASE_URL
-              }cv/Cepi_Septiyana_Junior_Fullstack_Developer.pdf`}
+              }cv/Cepi_Septiyana_Junior_Fullstack_Developer_CV.pdf`}
               download="cv_cepi_septiyana.pdf"
               className="resume-btn"
             >
