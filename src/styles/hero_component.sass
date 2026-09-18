@@ -1,115 +1,141 @@
+img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
 .hero 
-    min-height: 100vh
-    position: relative
-    overflow: hidden
-    display: flex
-    align-items: center
+    width: 100vw
+    height: unset
+    overflow: visible
 
-    .grid-bg 
-        position: absolute
-        inset: 0
-        background-image: linear-gradient(g.$line 1px, transparent 1px),linear-gradient(90deg, g.$line 1px, transparent 1px)
-        background-size: 70px 70px
-        opacity: 0.3
-        mask-image: linear-gradient(to bottom, #000, transparent 90%)
-
-    .orb 
-        position: absolute
-        border-radius: 50%
-        filter: blur(15px)
-        opacity: 0.75
-
-    .orb-one 
-        width: 32vw
-        height: 32vw
-        background: rgb(110, 110, 110)
-        right: -8vw
-        top: 14vh
-
-    .orb-two 
-        width: 24vw
-        height: 24vw
-        background: rgb(209, 209, 209)
-        left: -12vw
-        bottom: 9vh
-        opacity: 0.18
-
-    .hero-content 
-        position: relative
-        z-index: 2
-        width: min(1200px, 90vw)
-        margin: 0 auto
-        padding-top: 100px
-
-        .hero-kicker
-            font-family: "DM Mono", monospace
-            font-size: 11px
-            letter-spacing: 1px
-
-        .hero-kicker 
-            display: flex
-            align-items: center
-            gap: 10px
-            color: #bbb
+    .wrapper-container 
+        width: 100%
+        height: 100%
         
-        .hero-kicker span 
-            width: 7px
-            height: 7px
-            border-radius: 50%
-            background: g.$lime
-            box-shadow: 0 0 15px g.$lime
-
-        .hero-title 
-            font-size: clamp(58px, 9.3vw, 148px)
-            line-height: 0.91
-            letter-spacing: -0.075em
-            margin: 28px 0 42px
-            max-width: 1100px
-
-            .line 
-                display: block
-            
-            .italic
-                font-family: "Playfair Display", serif
-                font-weight: 500
-                
-            .accent 
-                color: g.$lime
-
-        .hero-bottom 
+        @media screen and (max-width: 720px), screen and (orientation: portrait)
+        .content-container
+            position: relative
+            width: 100vw
+            min-height: 100vh
+            height: min(56.25vh, 100vh)
             display: flex
-            align-items: end
-            justify-content: space-between
-            gap: 30px
-            
-            .hero-copy 
-                color: black
-                line-height: 1.7
-                max-width: 440px
-                font-size: 16px
-            
-            .hero-actions 
-                display: flex
-                gap: 12px
+            justify-content: center
+            flex-direction: column
 
-            .btn 
-                padding: 15px 20px
-                text-decoration: none
-                background-color: g.$primary
-                font-size: 13px
-                border-radius: 999px
-                display: flex
-                align-items: center
-                gap: 9px
+            .orb 
+                position: absolute
+                border-radius: 50%
+                filter: blur(15px)
+                opacity: 0.75
 
-            .primary 
-                background: g.$lime
-                color: #111
-                font-weight: 700
+            .orb-one 
+                width: min(37.687vh, 67vw)
+                height: min(33.75vh, 60vw)
+                background: rgb(218 0 255)
+                right: 4%
+                top: 12%
+                opacity: 0.18
 
-            .text 
-                color: #fff
+            .orb-two 
+                width: min(39.375vh, 70vw)
+                height: min(35.438vh, 63vw)
+                background: rgb(255 255 255)
+                left: -14%
+                bottom: 8%
+                opacity: 0.18
 
+            .hero-content 
+                position: relative
+                width: min(50.625vh, 90vw)
+                height: min(93.938vh, 167vw)
+                z-index: 2
+                margin: 0 auto
 
+                .hero-kicker
+                    font-family: "DM Mono", monospace
+                    font-size: min(1.519vh, 2.7vw)
+                    display: flex
+                    align-items: center
+                    gap: 4%
+                    color: #bbb
+                    letter-spacing: 0.1em
+                    margin-block-start: 17.8%
 
+                    span 
+                        width: 7px
+                        height: 7px
+                        border-radius: 50%
+                        background: g.$lime
+                        box-shadow: 0 0 15px g.$lime
 
+                .hero-title 
+                    // line-height: 0.91em
+                    // letter-spacing: -0.075em
+                    margin-block-start: 0.2em
+                    margin-block-end: 0.1em
+                    width: 100%
+                    height: min(38.25vh, 68vw)
+
+                    .title-1 
+                        display: block
+                        line-height: 0.91em
+                        letter-spacing: -0.075em
+                        font-size: min(9.563vh, 17vw)
+                    
+                    .title-2 
+                        display: block
+                        font-family: "Playfair Display", serif
+                        font-weight: 500
+                        word-spacing: 0.2em
+                        margin-inline-start: 0.8em
+                        margin-block-start: 0.2em
+                        letter-spacing: -3.3%
+                        font-size: min(5.625vh, 10vw)
+                        
+                    .title-3  
+                        display: block
+                        color: g.$lime
+                        font-size: min(9.563vh, 17vw)
+                        margin-block-start: -0.1em
+
+                .hero-bottom 
+                    width: 100%
+                    display: flex
+                    align-items: end
+                    flex-direction: column
+                    gap: 10%
+                    height: min(37.125vh, 66vw)
+                    
+                    .hero-copy 
+                        color: #ffffff
+                        line-height: 1.7
+                        width: 100%
+                        height: unset
+                        margin: 0
+                        // max-width: 440px
+                        font-size: min(2.137vh, 3.8vw)
+                    
+                    .hero-actions 
+                        width: min(39.375vh, 70vw)
+                        height: min(6.75vh, 12vw)
+                        display: flex
+                        gap: 12px
+
+                        .btn 
+                            font-size: min(1.8vh, 3.2vw)
+                            padding: 4%
+                            text-decoration: none
+                            background-color: g.$primary
+                            border-radius: 999px
+                            display: flex
+                            align-items: center
+                            gap: 9px
+
+                        .primary 
+                            width: min(22.5vh, 40vw)
+                            background: #4b4b4b
+                            color: #fff
+                            font-weight: 700
+
+                        .text 
+                            color: #fff
