@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy:test": "gh-pages -d dist -r origin-testing",
+    "deploy:prod": "gh-pages -d dist -r origin"
   },
   "dependencies": {
     "gsap": "^3.13.0",
