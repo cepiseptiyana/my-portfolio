@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import gsap from "gsap";
-import "./style.css";
+import "./styles.sass";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,0 +1,54 @@
+.nav 
+  position: fixed
+  height: 84px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 5vw
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1000
+  z-index: 10
+  width: 100%
+
+.brand 
+  font-size: 20px
+  font-weight: 800
+  letter-spacing: -1px
+  color: #fff
+  text-decoration: none
+
+.brand span 
+  font-size: 8px
+  vertical-align: top
+  margin-left: 2px
+
+.nav-links 
+  display: flex
+  gap: 30px
+
+.nav a 
+  color: #fff
+  text-decoration: none
+  font-size: 13px
+
+.nav-dot 
+  display: flex
+  gap: 8px
+  align-items: center
+
+.nav-dot span 
+  background: g.$lime
+  color: #111
+  border-radius: 50%
+  width: 22px
+  height: 22px
+  display: grid
+  place-items: center
+
+
+@media screen and (max-width: 720px), screen and (orientation: portrait)
+
+.nav-links 
+  display: none

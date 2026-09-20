@@ -1,7 +1,7 @@
 import "../styles/contact_component.sass";
 import { ArrowDownRight, Github, Linkedin, Mail } from "lucide-react";
 
-export default function ContactComponent({ Wave: ComponentWave }) {
+export default function ContactComponent() {
   return (
     <section className="contact" id="contact">
       <div className="contact-glow"></div>
@@ -30,7 +30,6 @@ export default function ContactComponent({ Wave: ComponentWave }) {
           <Mail /> Email
         </a>
       </div>
-      <ComponentWave className="wave-contact" />
     </section>
   );
 }

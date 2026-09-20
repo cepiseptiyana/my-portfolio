@@ -1,57 +1,203 @@
+img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+video 
+    width: 100%
+    height: 100%
+    object-fit: contain
+    
 .about 
-    background: g.$paper
-    color: #121212
+    width: 100vw
+    position: relative
+    min-height: 100vh
+    height: unset
     overflow: hidden
-    padding-bottom: 180px
+    background-color: g.$bg
 
-    .about-layout 
-        display: grid
-        grid-template-columns: 1.2fr 0.8fr
-        gap: 9vw
-        margin: 55px 0 80px
-    
-        .display 
-            font-size: clamp(42px, 6vw, 88px)
-            line-height: 1
-            letter-spacing: -0.06em
-            margin: 0
-    
-        .about-copy 
-            font-size: 16px
-            line-height: 1.75
+    .wrapper-container 
+        width: 100%
+        height: 100vh
+        display: flex
+        justify-content: center
 
-            p 
-                margin: 0 0 18px
+        .content-mb
+            position: relative
+            width: min(88.5vh, 120vw)
+            min-height: 100vh
+            height: min(56.25vh, 100vw)
+            // height: min(56.25vh, 100vh)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            overflow: hidden
+                    
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .center-container
+                    position: relative
+                    width: min(64.625vh, 90vw)
+                    height: min(93.938vh, 167vw)
+                    z-index: 2
+                    // padding: 5%
+                    
+                .title-about 
+                    width: min(54vh, 96vw)
+                    height: min(28.406vh, 50.5vw)
+                    line-height: 1
+                    letter-spacing: -1.109%
+                    margin: 0
+                    text-transform: uppercase
+                    margin-block-start: 3.2em
+                    font-family: "Playfair Display", serif
 
-            .about-actions 
-                display: flex
-                align-items: center
-                gap: 20px
-                margin-top: 28px
+                    .title-about-1
+                        font-size: min(8.662vh, 15.4vw)
+                    .title-about-2
+                        font-size: min(8.662vh, 15.4vw)
+                    .title-about-3
+                        font-size: min(8.494vh, 15.1vw)
 
-                .inline-link 
-                    margin-top: 0
-    
-                .resume-btn 
-                    min-width: 167px
-                    display: inline-flex
-                    align-items: center
-                    gap: 8px
-                    padding: 12px 18px
-                    background: g.$primary
-                    color: g.$paper
-                    border-radius: 999px
-                    text-decoration: none
-                    font-size: 12px
-                    font-weight: 600
-                    transition: all 0.3s ease
+                .wraper-flex 
+                    display: flex
+                    width: 100%
+                    height: min(48.881vh, 86.9vw)
+                    margin-block-start: 0.6em
+                    flex-direction: column
+                    position: relative
 
-                    &:hover 
-                        background: g.$lime
-                        color: #111
-                        transform: translateY(-3px)
-    
-    .wave-about 
-        fill: g.$bg
-        bottom: -1px
-    /* height: 150px */
+                    .wraper-desc
+                        flex: 1
+                        width: 100%
+
+                        .title-desc 
+                            font-size: min(7.087vh, 12.6vw)
+                            font-weight: 700
+                            line-height: 0.9em
+
+                        .desc-wrapper 
+                            width: min(53.888vh, 95.8vw)
+                            height: min(37.069vh, 65.9vw)
+                            
+                            .resume-btn 
+                                width: min(26.437vh, 47vw)
+                                height: min(5.625vh, 10vw)
+                                margin-block-start: 1.4em
+                                display: inline-flex
+                                align-items: center
+                                justify-content: center
+                                gap: 2vw
+                                padding: 2.7%
+                                background: g.$paper
+                                color: g.$bg
+                                text-decoration: none
+                                border-radius: 1.1vw
+                                font-size: min(2.025vh, 3.6vw)
+                                font-weight: 600
+                                transition: 0.3s ease
+
+                                &:hover
+                                    filter: brightness(0.9)
+                                    transform: translateY(-2px)
+
+                        .desc-about
+                            font-size: min(3.043vh, 5.41vw)
+                            letter-spacing: 0.03em
+                            margin-block-start: 2.1em
+                            width: 90%
+
+
+                    .wraper-image 
+                        flex: 1
+                        display: flex
+                        justify-content: center
+                        position: absolute
+                        z-index: 2
+                        // display: none
+
+                        .image
+                            width: min(67.556vh, 38vw)
+                            height: min(67.556vh, 38vw)
+        
+        .content-pc
+            position: relative
+            width: 100vw
+            min-height: 100vh
+            height: min(39.487vh, 70.2vw)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .center-container
+                position: relative
+                width: min(158.222vh, 89vw)
+                height: min(92.444vh, 52vw)
+                z-index: 2
+                    
+                .title-about 
+                    font-size: min(13.074vh, 7.354vw)
+                    line-height: 1
+                    letter-spacing: -1.109%
+                    margin: 0
+                    text-transform: uppercase
+                    margin-block-start: 0.3em
+                    font-family: "Playfair Display", serif
+
+                .wraper-flex 
+                    display: flex
+                    width: 100%
+                    height: min(67.556vh, 38vw)
+                    margin-block-start: 3.5%
+
+                    .wraper-desc
+                        flex: 1
+
+                        .title-desc 
+                            font-size: min(10.667vh, 6vw)
+                            font-weight: 700
+                            line-height: 0.9em
+
+                        .desc-wrapper
+                            margin-block-start: 2.1em
+
+                            .resume-btn 
+                                width: min(34.667vh, 19.5vw)
+                                height: min(7.467vh, 4.2vw)
+                                display: inline-flex
+                                align-items: center
+                                justify-content: center
+                                gap: 2vw
+                                padding: 2.7%
+
+                                background: g.$paper
+                                color: g.$bg
+                                text-decoration: none
+                                border-radius: 1.1vw
+                                font-size: min(2.311vh, 1.3vw)
+                                font-weight: 600
+                                transition: 0.3s ease
+
+                                &:hover
+                                    filter: brightness(0.9)
+                                    transform: translateY(-2px)
+
+                            .desc-about
+                                font-size: min(3.378vh, 1.9vw)
+                                letter-spacing: 0.03em
+                                margin-block-start: 1em
+                                width: 90%
+
+
+                    .wraper-image 
+                        flex: 1
+                        display: flex
+                        justify-content: center
+
+                        .image
+                            width: min(67.556vh, 38vw)
+                            height: min(67.556vh, 38vw)
+
+        
+            

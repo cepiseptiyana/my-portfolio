@@ -3,63 +3,159 @@ img
     height: 100%
     object-fit: contain
 
+video 
+    width: 100%
+    height: 100%
+    object-fit: cover
+
 .hero 
     width: 100vw
+    position: relative
+    min-height: 100vh
     height: unset
-    overflow: visible
+    overflow: hidden
 
     .wrapper-container 
         width: 100%
         height: 100%
+        display: flex
+        justify-content: center
         
-        @media screen and (max-width: 720px), screen and (orientation: portrait)
-        .content-container
+        .content-mb
             position: relative
-            width: 100vw
+            width: min(88.5vh, 120vw)
             min-height: 100vh
-            height: min(56.25vh, 100vh)
+            height: min(56.25vh, 100vw)
+            // height: min(56.25vh, 100vh)
             display: flex
             justify-content: center
             flex-direction: column
+            overflow: hidden
+            
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .container-video 
+                    position: absolute
+                    width: min(239.063vh, 425vw)
+                    height: min(154.688vh, 275vw)
+                    z-index: 1
 
-            .orb 
+
+                .center-container
+                    position: relative
+                    // width: 100%
+                    // height: 100%
+                    width: min(64.625vh, 90vw)
+                    height: min(93.938vh, 167vw)
+                    z-index: 2
+                    margin: 0 auto
+
+                    .hero-kicker
+                        font-family: "DM Mono", monospace
+                        font-size: min(1.941vh, 3.45vw)
+                        display: flex
+                        align-items: center
+                        gap: 4%
+                        color: #bbb
+                        letter-spacing: 0.1em
+                        margin-block-start: 5.8em
+
+                        span 
+                            width: 7px
+                            height: 7px
+                            border-radius: 50%
+                            background: g.$lime
+                            box-shadow: 0 0 15px g.$lime
+
+                    .hero-title 
+                        margin-block-start: 0.2em
+                        margin-block-end: 0.1em
+                        width: 100%
+                        height: min(38.25vh, 68vw)
+
+                        .title-1 
+                            display: block
+                            line-height: 0.91em
+                            letter-spacing: 0.003em
+                            font-size: min(8.662vh, 15.4vw)
+                            letter-spacing: 0.1em
+                            transform: translate(0px, 0px)
+                            margin-block-start: 0.5em
+                            text-transform: uppercase
+                            font-family: "Playfair Display", serif
+                        
+                        .title-2 
+                            display: block
+                            font-weight: 500
+                            word-spacing: 0.2em
+                            letter-spacing: 0.05em
+                            // margin-inline-start: 0.8em
+                            margin-block-start: 0.4em
+                            letter-spacing: -0.02em
+                            font-size: min(6.019vh, 10.7vw)
+                            font-family: "Playfair Display", serif
+                            
+                        .title-3  
+                            display: block
+                            color: g.$lime
+                            font-size: min(8.662vh, 15.4vw)
+                            text-transform: capitalize
+                            font-family: "Playfair Display", serif
+                            letter-spacing: 0.020em
+                            margin-block-start: -0.20em
+
+                    .hero-bottom 
+                        width: min(51.3vh, 91.2vw)
+                        height: min(50.8vw, 50.8vw)
+                        margin-block-start: -1.5em
+                        // height: min(37.125vh, 66vw)
+                        
+                        .hero-copy 
+                            color: #ffffff
+                            font-size: min(2.756vh, 4.9vw)
+                            line-height: 1.7
+                            width: 100%
+                            height: unset
+                            margin: 0
+                            // max-width: 440px
+                            margin-block-start: 3.3em
+                        
+                        
+
+        // PC
+
+        .content-pc
+            position: relative
+            width: 100vw
+            min-height: 100%
+            height: min(39.487vh, 70.2vw)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .container-video 
                 position: absolute
-                border-radius: 50%
-                filter: blur(15px)
-                opacity: 0.75
+                width: 196vw
+                height: 98vw
+                // width: min(213.333vh, 120vw)
+                // height: min(174.222vh, 98vw)
+                z-index: 1
 
-            .orb-one 
-                width: min(37.687vh, 67vw)
-                height: min(33.75vh, 60vw)
-                background: rgb(218 0 255)
-                right: 4%
-                top: 12%
-                opacity: 0.18
-
-            .orb-two 
-                width: min(39.375vh, 70vw)
-                height: min(35.438vh, 63vw)
-                background: rgb(255 255 255)
-                left: -14%
-                bottom: 8%
-                opacity: 0.18
-
-            .hero-content 
+            .center-container
                 position: relative
-                width: min(50.625vh, 90vw)
-                height: min(93.938vh, 167vw)
+                width: min(158.222vh, 89vw)
+                height: min(110.222vh, 62vw)
                 z-index: 2
-                margin: 0 auto
 
                 .hero-kicker
                     font-family: "DM Mono", monospace
-                    font-size: min(1.519vh, 2.7vw)
+                    font-size: min(2.311vh, 1.3vw)
                     display: flex
                     align-items: center
                     gap: 4%
                     color: #bbb
                     letter-spacing: 0.1em
-                    margin-block-start: 17.8%
+                    margin-block-start: 9%
 
                     span 
                         width: 7px
@@ -69,18 +165,19 @@ img
                         box-shadow: 0 0 15px g.$lime
 
                 .hero-title 
-                    // line-height: 0.91em
-                    // letter-spacing: -0.075em
                     margin-block-start: 0.2em
                     margin-block-end: 0.1em
                     width: 100%
-                    height: min(38.25vh, 68vw)
+                    // height: min(38.25vh, 68vw)
 
                     .title-1 
                         display: block
+                        font-family: "Playfair Display", serif
                         line-height: 0.91em
-                        letter-spacing: -0.075em
-                        font-size: min(9.563vh, 17vw)
+                        letter-spacing: -0.004em
+                        font-size: min(16.711vh, 9.4vw)
+                        margin-block-start: 0.1em
+                        text-transform: capitalize
                     
                     .title-2 
                         display: block
@@ -88,54 +185,37 @@ img
                         font-weight: 500
                         word-spacing: 0.2em
                         margin-inline-start: 0.8em
-                        margin-block-start: 0.2em
+                        margin-block-start: 0.04em
                         letter-spacing: -3.3%
-                        font-size: min(5.625vh, 10vw)
+                        font-size: min(10.667vh, 6vw)
                         
                     .title-3  
                         display: block
+                        font-family: "Playfair Display", serif
                         color: g.$lime
-                        font-size: min(9.563vh, 17vw)
-                        margin-block-start: -0.1em
+                        font-size: min(16.711vh, 9.4vw)
+                        margin-block-start: -0.465em
+                        text-transform: capitalize
 
                 .hero-bottom 
                     width: 100%
                     display: flex
-                    align-items: end
+                    // align-items: end
                     flex-direction: column
                     gap: 10%
-                    height: min(37.125vh, 66vw)
+                    height: min(26.667vh, 15vw)
                     
                     .hero-copy 
                         color: #ffffff
                         line-height: 1.7
-                        width: 100%
+                        width: min(97.778vh, 55vw)
                         height: unset
                         margin: 0
                         // max-width: 440px
-                        font-size: min(2.137vh, 3.8vw)
-                    
-                    .hero-actions 
-                        width: min(39.375vh, 70vw)
-                        height: min(6.75vh, 12vw)
-                        display: flex
-                        gap: 12px
+                        font-size: min(3.2vh, 1.8vw)
 
-                        .btn 
-                            font-size: min(1.8vh, 3.2vw)
-                            padding: 4%
-                            text-decoration: none
-                            background-color: g.$primary
-                            border-radius: 999px
-                            display: flex
-                            align-items: center
-                            gap: 9px
 
-                        .primary 
-                            width: min(22.5vh, 40vw)
-                            background: #4b4b4b
-                            color: #fff
-                            font-weight: 700
 
-                        .text 
-                            color: #fff
+    .wave-hero
+        fill: #f1eee7
+        bottom: -10%
