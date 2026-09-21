@@ -129,10 +129,10 @@ video
                 .skills-frontEnd
                     border-top: 1px solid rgba(255, 255, 255, 0.12)
                     position: absolute
-                    background: #333333
+                    background: #141414
                     width: 100vw
                     min-height: 100vh
-                    height: min(253.125vh, 450vw)
+                    height: min(291.488vh, 518.2vw)
                     display: flex
                     justify-content: center
                     align-items: center
@@ -142,14 +142,14 @@ video
                     
                     .center-category
                         width: min(64.625vh, 90vw)
-                        height: min(253.125vh, 450vw)
+                        height: min(291.488vh, 518.2vw)
                         margin-block-start: 4.9em
 
                         .skill-category 
                             display: flex
                             flex-direction: column
                             position: relative
-                            padding: 1.3em 0 1.3em
+                            padding: 1.3em 0 3.6em
                             width: min(64.625vh, 90vw)
                             border-top: 1px solid rgba(255, 255, 255, 0.12)
                             border-bottom: 1px solid rgba(255, 255, 255, 0.12)
@@ -165,30 +165,28 @@ video
                                 .title-1
                                     margin-block-start: -0.4em
                                     font-family: "Playfair Display", serif
-                                    grid-column: 1
-                                    font-size: min(8.662vh, 15.4vw)
+                                    font-size: min(6.3vh, 11.2vw)
                                     letter-spacing: 0.007em
                                     text-transform: uppercase
                                     color: g.$lime
 
                                 .title-2
                                     font-family: "Playfair Display", serif
-                                    grid-column: 1
-                                    font-size: min(8.1vh, 14.4vw)
+                                    font-size: min(5.85vh, 10.4vw)
                                     letter-spacing: 0.009em
                                     margin-block-start: -0.35em
 
                                 .skill-list 
-                                    grid-column: 2
                                     display: grid
-                                    grid-template-columns: 25vw 25vw 25vw
-                                    grid-template-rows: 16vw 16vw
+                                    grid-template-columns: repeat(2, 1fr)
+                                    // grid-template-rows: repeat(3, 1fr)
                                     gap: 8%
                                     margin-block-start: 0.8em
 
                                     .skill-item 
-                                        width: min(14.063vh, 25vw)
-                                        height: min(9vh, 16vw)
+                                        // width: min(14.063vh, 25vw)
+                                        // height: min(9vh, 16vw)
+                                        height: min(12.206vh, 21.7vw)
                                         display: flex
                                         flex-direction: column
                                         align-items: center
@@ -206,7 +204,7 @@ video
 
                                         span 
                                             font-family: "DM Mono", monospace
-                                            font-size: 10px
+                                            font-size: min(1.969vh, 3.5vw)
                                             text-align: center
                                             color: #bdbdbd
 
@@ -229,5 +227,179 @@ video
                                             transform: scale(1.15)
 
 
+        .content-pc
+            position: relative
+            width: 100vw
+            min-height: 100vh
+            // height: min(39.487vh, 70.2vw)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .center-container
+                position: relative
+                width: min(158.222vh, 89vw)
+                // height: min(92.444vh, 52vw)
+                z-index: 2
+
+                .skills-header 
+                    // display: flex
+                    // justify-content: space-between
+                    // align-items: flex-end
+                    margin-top: 55px
+                    margin-bottom: 80px
+                    gap: 50px
+
+                    .title-wraper 
+                        .title-1
+                            font-size: min(9.874vh, 5.554vw)
+                            font-family: "Playfair Display", serif
+                            font-weight: 500
+                            line-height: 0.9em
+                            letter-spacing: 0.03em
+                            color: g.$lime
+                            text-transform: uppercase
+                            
+                        .title-2
+                            font-size: min(9.874vh, 5.554vw)
+                            font-family: "Playfair Display", serif
+                            font-weight: 500
+                            line-height: 1.1em
+                            letter-spacing: 0.010em
+                            color: g.$lime
+                            text-transform: uppercase
+
+                        .title-3
+                            font-size: min(6.222vh, 3.5vw)
+                            font-family: "Playfair Display", serif
+                            font-weight: 500
+                            line-height: 1.1em
+                            letter-spacing: -0.005em
+
+                        .title-4
+                            font-size: min(6.222vh, 3.5vw)
+                            font-family: "Playfair Display", serif
+                            font-weight: 500
+                            line-height: 1.1em
+                            letter-spacing: 0.008em
+                    
+                    p 
+                        width: min(76.444vh, 43vw)
+                        color: #8f8f8f
+                        font-size: min(3.378vh, 1.9vw)
+                        line-height: 1.5em
+                        margin-block-start: 1.3em
+
+                .skills-modern 
+                    border-top: 1px solid rgba(255, 255, 255, 0.12)
+
+                    .skill-category 
+                        // display: grid
+                        // grid-template-columns: 100px minmax(250px, 1fr) 2fr
+                        // gap: 40px
+                        padding: 45px 0
+                        // border-bottom: 1px solid rgba(255, 255, 255, 0.12)
+                        // transition: background 0.4s ease, padding 0.4s ease
+
+                        .skill-content 
+                            gap: 40px
+
+                            .title-1
+                                margin-block-start: -0.4em
+                                font-family: "Playfair Display", serif
+                                font-size: min(6.3vh, 11.2vw)
+                                letter-spacing: 0.007em
+                                text-transform: uppercase
+                                color: g.$lime
+
+                            .title-2
+                                font-family: "Playfair Display", serif
+                                font-size: min(5.85vh, 10.4vw)
+                                letter-spacing: 0.009em
+                                margin-block-start: -0.35em
+
+                            .skill-list 
+                                display: grid
+                                grid-template-columns: repeat(3, 20.6vw)
+                                column-gap: 2.3%
+                                row-gap: 10.6%
+                                padding-top: 1.4em
+
+                                .skill-item 
+                                    height: min(18.844vh, 10.6vw)
+                                    display: flex
+                                    flex-direction: column
+                                    align-items: center
+                                    justify-content: center
+                                    gap: 12px
+                                    border: 1px solid rgba(255, 255, 255, 0.12)
+                                    border-radius: 10px
+                                    color: #bdbdbd
+                                    transition: all 0.3s ease
+                                    cursor: default
+
+                                    svg 
+                                        color: g.$lime
+                                        transition: transform 0.3s ease
+
+                                    span 
+                                        font-family: "DM Mono", monospace
+                                        font-size: min(2.133vh, 1.2vw)
+                                        text-align: center
+                                        color: #bdbdbd
+
+                                    &:hover 
+                                        background: g.$lime
+                                        border-color: g.$lime
+                                        transform: translateY(-5px)
+
+                                    &:hover span 
+                                        color: #111
+
+                                        &:hover 
+                                            background: g.$lime
+                                            color: #111
+                                            border-color: g.$lime
+                                            transform: translateY(-3px)
+
+                                    &:hover svg 
+                                        color: #111
+                                        transform: scale(1.15)
+
+
+            .skills-marquee 
+                margin-top: 100px
+                width: 100%
+                overflow: hidden
+                border-top: 1px solid rgba(255, 255, 255, 0.1)
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+                padding: 25px 0
+
+                .marquee-track 
+                    display: flex
+                    width: max-content
+                    gap: 50px
+                    animation: marquee 25s linear infinite
+
+                .marquee-track span 
+                    font-size: clamp(25px, 4vw, 55px)
+                    font-weight: 700
+                    letter-spacing: -0.05em
+                    color: transparent
+                    -webkit-text-stroke: 1px #555
+                    white-space: nowrap
+
+                .marquee-track span:nth-child(odd) 
+                    color: g.$lime
+                    -webkit-text-stroke: 0
+
+                @keyframes marquee 
+                    from 
+                        transform: translateX(0)
+                    
+                    to 
+                        transform: translateX(-50%)
+  
                     
   

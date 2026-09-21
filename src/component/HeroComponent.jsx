@@ -136,14 +136,14 @@ export default function HeroComponent() {
 
           {device === "mb" && (
             <div className="content-mb">
-              <div className="container-video">
+              {/* <div className="container-video">
                 <video autoPlay muted loop playsInline>
                   <source
                     src={`${import.meta.env.BASE_URL}videos/cinematic.webm`}
                     type="video/webm"
                   />
                 </video>
-              </div>
+              </div> */}
               {/* 
               <div className="orb orb-one"></div>
               <div className="orb orb-two"></div> */}
@@ -180,14 +180,14 @@ export default function HeroComponent() {
 
           {device === "pc" && (
             <div className="content-pc">
-              <div className="container-video">
+              {/* <div className="container-video">
                 <video autoPlay muted loop playsInline>
                   <source
                     src={`${import.meta.env.BASE_URL}videos/cinematic.webm`}
                     type="video/webm"
                   />
                 </video>
-              </div>
+              </div> */}
 
               {/* <div className="orb orb-one"></div>
               <div className="orb orb-two"></div> */}

@@ -265,7 +265,7 @@ function initMobileAnimation() {
     scrollTrigger: {
       trigger: ".skills",
       start: "top top",
-      end: "+=2000",
+      end: "+=3000",
       pin: true,
       scrub: 1,
     },
@@ -286,8 +286,9 @@ function initMobileAnimation() {
   );
 
   scrollTrigger.to(".skills-frontEnd", {
-    top: "-230%",
-    duration: 0.7,
+    top: "-330%",
+    duration: 1.5,
+    ease: "none",
   });
 }
 
@@ -377,11 +378,12 @@ export default function SkillComponent() {
             <div className="content-pc">
               <div className="center-container">
                 <div className="skills-header">
-                  <h2>
-                    Technologies I use
-                    <br />
-                    <i>to build for the web.</i>
-                  </h2>
+                  <div className="title-wraper">
+                    <div className="title-1">Technologies</div>
+                    <div className="title-2">I use</div>
+                    <div className="title-3">To build ━</div>
+                    <div className="title-4">For the web</div>
+                  </div>
 
                   <p>
                     A collection of technologies and tools I have worked with
