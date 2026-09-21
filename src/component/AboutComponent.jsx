@@ -123,7 +123,7 @@ function initMobileAnimation() {
   aboutScrollTl.to(
     ".wraper-image",
     {
-      top: "-404%",
+      top: "-304%",
       duration: 4,
     },
     "+=2"
@@ -143,7 +143,7 @@ function initMobileAnimation() {
       duration: 1,
       ease: "none",
     },
-    "+=1"
+    "+=0.5"
   );
 
   aboutScrollTl.to(".arrow_bottom", {

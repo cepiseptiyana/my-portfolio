@@ -63,9 +63,9 @@ function RenderSkillFrontEnd() {
   }
 
   return (
-    <div className="center-skill-category">
+    <div className="skill-category">
       <div className="skill-content">
-        <div className="title-1">Frontend</div>
+        <div className="title-1">Front end</div>
         <div className="title-2">Development</div>
         <div className="skill-list">{element}</div>
       </div>
@@ -116,13 +116,9 @@ function RenderSkillInterface() {
 
   return (
     <div className="skill-category">
-      <div className="skill-number">02</div>
-
       <div className="skill-content">
-        <span className="skill-label">UI & INTERACTION</span>
-
-        <h3>Interface & Animation</h3>
-
+        <div className="title-1">Interface &</div>
+        <div className="title-2">Animation</div>
         <div className="skill-list">{element}</div>
       </div>
     </div>
@@ -168,13 +164,9 @@ function RenderSkillBackEnd() {
 
   return (
     <div className="skill-category">
-      <div className="skill-number">03</div>
-
       <div className="skill-content">
-        <span className="skill-label">BACKEND</span>
-
-        <h3>Backend Development</h3>
-
+        <div className="title-1">Backend</div>
+        <div className="title-2">Development</div>
         <div className="skill-list">{element}</div>
       </div>
     </div>
@@ -208,13 +200,8 @@ function RenderSkillDatabase() {
 
   return (
     <div className="skill-category">
-      <div className="skill-number">04</div>
-
       <div className="skill-content">
-        <span className="skill-label">DATABASE</span>
-
-        <h3>Database</h3>
-
+        <div className="title-1">Database</div>
         <div className="skill-list">{element}</div>
       </div>
     </div>
@@ -264,13 +251,9 @@ function RenderSkillDevops() {
 
   return (
     <div className="skill-category">
-      <div className="skill-number">05</div>
-
       <div className="skill-content">
-        <span className="skill-label">DEVOPS & TOOLS</span>
-
-        <h3>Development & Deployment</h3>
-
+        <div className="title-1">DEVOPS &</div>
+        <div className="title-2">TOOLS</div>
         <div className="skill-list">{element}</div>
       </div>
     </div>
@@ -282,7 +265,7 @@ function initMobileAnimation() {
     scrollTrigger: {
       trigger: ".skills",
       start: "top top",
-      end: "+=4000",
+      end: "+=2000",
       pin: true,
       scrub: 1,
     },
@@ -299,8 +282,13 @@ function initMobileAnimation() {
       right: 0,
       duration: 0.7,
     },
-    "+=5"
+    "+=0.5"
   );
+
+  scrollTrigger.to(".skills-frontEnd", {
+    top: "-230%",
+    duration: 0.7,
+  });
 }
 
 function initDesktopAnimation() {}
@@ -370,11 +358,13 @@ export default function SkillComponent() {
               </div>
 
               <div className="skills-frontEnd">
-                {RenderSkillFrontEnd()}
-                {/* {RenderSkillInterface()} */}
-                {/* {RenderSkillBackEnd()} */}
-                {/* {RenderSkillDatabase()} */}
-                {/* {RenderSkillDevops()} */}
+                <div className="center-category">
+                  {RenderSkillFrontEnd()}
+                  {RenderSkillInterface()}
+                  {RenderSkillBackEnd()}
+                  {RenderSkillDatabase()}
+                  {RenderSkillDevops()}
+                </div>
               </div>
             </div>
           )}
