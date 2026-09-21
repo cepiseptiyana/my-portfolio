@@ -52,6 +52,13 @@ function initMobileAnimation() {
     top: "-50%",
   });
 
+  gsap.set(".arrow_bottom", {
+    position: "relative",
+    top: "-41.6%",
+    left: "32%",
+    clipPath: "inset(0 0 100% 0)",
+  });
+
   aboutScrollTl.to(".title-about-1", {
     left: "0%",
     duration: 0.3,
@@ -121,6 +128,43 @@ function initMobileAnimation() {
     },
     "+=2"
   );
+
+  aboutScrollTl.to(".arrow_bottom", {
+    clipPath: "inset(0 0 0% 0)",
+    duration: 1,
+    ease: "none",
+  });
+
+  aboutScrollTl.to(
+    ".arrow_bottom",
+    {
+      clipPath: "inset(0 0 0% 0)",
+      top: "-34.6%",
+      duration: 1,
+      ease: "none",
+    },
+    "+=1"
+  );
+
+  aboutScrollTl.to(".arrow_bottom", {
+    clipPath: "inset(0 0 0% 0)",
+    top: "-38.6%",
+    duration: 1,
+    ease: "none",
+  });
+
+  aboutScrollTl.to(".arrow_bottom", {
+    clipPath: "inset(0 0 0% 0)",
+    top: "-25.6%",
+    duration: 1,
+    ease: "none",
+  });
+
+  aboutScrollTl.to(".arrow_bottom", {
+    clipPath: "inset(100% 0 0% 0)",
+    duration: 1,
+    ease: "none",
+  });
 }
 
 function initDesktopAnimation() {
@@ -182,13 +226,17 @@ export default function AboutComponent() {
   const root_about = useRef(null);
 
   useEffect(() => {
-    if (device === "mb") {
-      initMobileAnimation();
-    }
+    const ctx = gsap.context(() => {
+      if (device === "mb") {
+        initMobileAnimation();
+      }
 
-    if (device === "pc") {
-      initDesktopAnimation();
-    }
+      if (device === "pc") {
+        initDesktopAnimation();
+      }
+    }, root_about);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -227,6 +275,15 @@ export default function AboutComponent() {
                         I am a Junior Web Developer with experience as a
                         Front-End Engineer, focused on developing web
                         applications and responsive user interfaces.
+                      </div>
+
+                      <div className="arrow_bottom">
+                        <img
+                          src={`${
+                            import.meta.env.BASE_URL
+                          }icons/icon_rows_bottom.svg`}
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>

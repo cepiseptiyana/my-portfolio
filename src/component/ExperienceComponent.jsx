@@ -4,8 +4,6 @@ export default function ExperienceComponent() {
   return (
     <section className="experience section" id="experience">
       <div className="experience-top">
-        <div className="section-label">( 03 — EXPERIENCE )</div>
-
         <p className="experience-intro">
           Practical experience working as a Front-End Engineer, developing
           interfaces, maintaining existing codebases, and collaborating on web

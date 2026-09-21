@@ -35,7 +35,7 @@ export default function App() {
       <main>
         <HeroComponent />
         <AboutComponent />
-        {/* <SkillComponent /> */}
+        <SkillComponent />
         {/* <ExperienceComponent /> */}
         {/* <ProjectComponent /> */}
         {/* <ProcessComponent /> */}

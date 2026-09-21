@@ -111,15 +111,19 @@ export default function HeroComponent() {
   const root_hero = useRef(null);
 
   useEffect(() => {
-    firstAnimateGsap();
+    const ctx = gsap.context(() => {
+      firstAnimateGsap();
 
-    if (device === "mb") {
-      initMobileAnimation();
-    }
+      if (device === "mb") {
+        initMobileAnimation();
+      }
 
-    if (device === "pc") {
-      initDesktopAnimation();
-    }
+      if (device === "pc") {
+        initDesktopAnimation();
+      }
+    }, root_hero);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -135,8 +139,8 @@ export default function HeroComponent() {
               <div className="container-video">
                 <video autoPlay muted loop playsInline>
                   <source
-                    src={`${import.meta.env.BASE_URL}videos/cinematic.mp4`}
-                    type="video/mp4"
+                    src={`${import.meta.env.BASE_URL}videos/cinematic.webm`}
+                    type="video/webm"
                   />
                 </video>
               </div>
@@ -179,8 +183,8 @@ export default function HeroComponent() {
               <div className="container-video">
                 <video autoPlay muted loop playsInline>
                   <source
-                    src={`${import.meta.env.BASE_URL}videos/cinematic.mp4`}
-                    type="video/mp4"
+                    src={`${import.meta.env.BASE_URL}videos/cinematic.webm`}
+                    type="video/webm"
                   />
                 </video>
               </div>

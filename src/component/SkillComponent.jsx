@@ -13,230 +13,423 @@ import {
   Terminal,
 } from "lucide-react";
 import "../styles/skill_component.sass";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import useDevice from "../hooks/useDevice";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+function RenderSkillFrontEnd() {
+  let element = [];
+
+  const skill_frontEnd = [
+    {
+      name: "React.js",
+      icon: Code2,
+    },
+    {
+      name: "Next.js",
+      icon: Layers3,
+    },
+    {
+      name: "JavaScript",
+      icon: Braces,
+    },
+    {
+      name: "TypeScript",
+      icon: FileCode2,
+    },
+    {
+      name: "HTML",
+      icon: FileCode2,
+    },
+    {
+      name: "CSS",
+      icon: Palette,
+    },
+  ];
+
+  for (const skills of skill_frontEnd) {
+    const Icon = skills.icon;
+
+    element.push(
+      <div className="skill-item" key={skills.name}>
+        <Icon size={28} />
+        <span>{skills.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="center-skill-category">
+      <div className="skill-content">
+        <div className="title-1">Frontend</div>
+        <div className="title-2">Development</div>
+        <div className="skill-list">{element}</div>
+      </div>
+    </div>
+  );
+}
+
+function RenderSkillInterface() {
+  let element = [];
+
+  const skill_interface = [
+    {
+      name: "GSAP",
+      icon: Sparkles,
+    },
+    {
+      name: "Swiper",
+      icon: Layers3,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: Palette,
+    },
+    {
+      name: "Bootstrap",
+      icon: Palette,
+    },
+    {
+      name: "Ant Design",
+      icon: Layers3,
+    },
+    {
+      name: "Responsive Design",
+      icon: Code2,
+    },
+  ];
+
+  for (const skills of skill_interface) {
+    const Icon = skills.icon;
+
+    element.push(
+      <div className="skill-item" key={skills.name}>
+        <Icon size={28} />
+        <span>{skills.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="skill-category">
+      <div className="skill-number">02</div>
+
+      <div className="skill-content">
+        <span className="skill-label">UI & INTERACTION</span>
+
+        <h3>Interface & Animation</h3>
+
+        <div className="skill-list">{element}</div>
+      </div>
+    </div>
+  );
+}
+
+function RenderSkillBackEnd() {
+  let element = [];
+
+  const skill_backend = [
+    {
+      name: "Laravel",
+      icon: Server,
+    },
+    {
+      name: "PHP",
+      icon: FileCode2,
+    },
+    {
+      name: "Node.js",
+      icon: Server,
+    },
+    {
+      name: "Express.js",
+      icon: Server,
+    },
+    {
+      name: "REST API",
+      icon: Braces,
+    },
+  ];
+
+  for (const skills of skill_backend) {
+    const Icon = skills.icon;
+
+    element.push(
+      <div className="skill-item" key={skills.name}>
+        <Icon size={28} />
+        <span>{skills.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="skill-category">
+      <div className="skill-number">03</div>
+
+      <div className="skill-content">
+        <span className="skill-label">BACKEND</span>
+
+        <h3>Backend Development</h3>
+
+        <div className="skill-list">{element}</div>
+      </div>
+    </div>
+  );
+}
+
+function RenderSkillDatabase() {
+  let element = [];
+
+  const skill_database = [
+    {
+      name: "MySQL",
+      icon: Database,
+    },
+    {
+      name: "PostgreSQL",
+      icon: Database,
+    },
+  ];
+
+  for (const skills of skill_database) {
+    const Icon = skills.icon;
+
+    element.push(
+      <div className="skill-item" key={skills.name}>
+        <Icon size={28} />
+        <span>{skills.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="skill-category">
+      <div className="skill-number">04</div>
+
+      <div className="skill-content">
+        <span className="skill-label">DATABASE</span>
+
+        <h3>Database</h3>
+
+        <div className="skill-list">{element}</div>
+      </div>
+    </div>
+  );
+}
+
+function RenderSkillDevops() {
+  let element = [];
+
+  const skill_devops = [
+    {
+      name: "Git",
+      icon: GitBranch,
+    },
+    {
+      name: "GitHub",
+      icon: Github,
+    },
+    {
+      name: "Jenkins",
+      icon: Terminal,
+    },
+    {
+      name: "Docker",
+      icon: Container,
+    },
+    {
+      name: "Linux",
+      icon: Terminal,
+    },
+    {
+      name: "Apache",
+      icon: Server,
+    },
+  ];
+
+  for (const skills of skill_devops) {
+    const Icon = skills.icon;
+
+    element.push(
+      <div className="skill-item" key={skills.name}>
+        <Icon size={28} />
+        <span>{skills.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="skill-category">
+      <div className="skill-number">05</div>
+
+      <div className="skill-content">
+        <span className="skill-label">DEVOPS & TOOLS</span>
+
+        <h3>Development & Deployment</h3>
+
+        <div className="skill-list">{element}</div>
+      </div>
+    </div>
+  );
+}
+
+function initMobileAnimation() {
+  const scrollTrigger = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skills",
+      start: "top top",
+      end: "+=4000",
+      pin: true,
+      scrub: 1,
+    },
+  });
+
+  gsap.set(".skills-frontEnd", {
+    position: "absolute",
+    right: "-100%",
+  });
+
+  scrollTrigger.to(
+    ".skills-frontEnd",
+    {
+      right: 0,
+      duration: 0.7,
+    },
+    "+=5"
+  );
+}
+
+function initDesktopAnimation() {}
 
 export default function SkillComponent() {
+  const device = useDevice();
+  const root_skills = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (device === "mb") {
+        initMobileAnimation();
+      }
+
+      if (device === "pc") {
+        initDesktopAnimation();
+      }
+    }, root_skills);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="skills-section section" id="skills">
-      <div className="section-label">( 02 — SKILLS )</div>
+    <div ref={root_skills}>
+      <section className="skills section" id="skills">
+        <div className="wrapper-container">
+          {/* =====================
+              MOBILE
+          ===================== */}
 
-      <div className="skills-header">
-        <h2>
-          Technologies I use
-          <br />
-          <i>to build for the web.</i>
-        </h2>
+          {device == "mb" && (
+            <div className="content-mb">
+              <div className="center-container">
+                <div className="skills-header">
+                  <div className="title-wraper">
+                    <div className="title-1">Techno</div>
+                    <div className="title-2">logies</div>
+                    <div className="title-3">I use</div>
+                    <div className="title-4">To build ━</div>
+                    <div className="title-5">For the web</div>
+                  </div>
 
-        <p>
-          A collection of technologies and tools I have worked with throughout
-          web development projects.
-        </p>
-      </div>
+                  <p>
+                    A collection of technologies and tools I have worked with
+                    throughout web development projects.
+                  </p>
+                </div>
 
-      <div className="skills-modern">
-        <div className="skill-category">
-          <div className="skill-number">01</div>
-
-          <div className="skill-content">
-            <span className="skill-label">FRONTEND</span>
-
-            <h3>Frontend Development</h3>
-
-            <div className="skill-list">
-              <div className="skill-item">
-                <Code2 size={28} />
-                <span>React.js</span>
+                <div className="skills-marquee">
+                  <div className="marquee-track">
+                    <span>REACT</span>
+                    <span>JAVASCRIPT</span>
+                    <span>GSAP</span>
+                    <span>NEXT.JS</span>
+                    <span>LARAVEL</span>
+                    <span>NODE.JS</span>
+                    <span>MYSQL</span>
+                    <span>REACT</span>
+                    <span>JAVASCRIPT</span>
+                    <span>GSAP</span>
+                    <span>NEXT.JS</span>
+                    <span>LARAVEL</span>
+                    <span>NODE.JS</span>
+                    <span>MYSQL</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="skill-item">
-                <Layers3 size={28} />
-                <span>Next.js</span>
-              </div>
-
-              <div className="skill-item">
-                <Braces size={28} />
-                <span>JavaScript</span>
-              </div>
-
-              <div className="skill-item">
-                <FileCode2 size={28} />
-                <span>TypeScript</span>
-              </div>
-
-              <div className="skill-item">
-                <FileCode2 size={28} />
-                <span>HTML</span>
-              </div>
-
-              <div className="skill-item">
-                <Palette size={28} />
-                <span>CSS</span>
+              <div className="skills-frontEnd">
+                {RenderSkillFrontEnd()}
+                {/* {RenderSkillInterface()} */}
+                {/* {RenderSkillBackEnd()} */}
+                {/* {RenderSkillDatabase()} */}
+                {/* {RenderSkillDevops()} */}
               </div>
             </div>
-          </div>
-        </div>
+          )}
 
-        <div className="skill-category">
-          <div className="skill-number">02</div>
+          {/* =====================
+              DEKSTOP
+          ===================== */}
 
-          <div className="skill-content">
-            <span className="skill-label">UI & INTERACTION</span>
+          {device == "pc" && (
+            <div className="content-pc">
+              <div className="center-container">
+                <div className="skills-header">
+                  <h2>
+                    Technologies I use
+                    <br />
+                    <i>to build for the web.</i>
+                  </h2>
 
-            <h3>Interface & Animation</h3>
+                  <p>
+                    A collection of technologies and tools I have worked with
+                    throughout web development projects.
+                  </p>
+                </div>
 
-            <div className="skill-list">
-              <div className="skill-item">
-                <Sparkles size={28} />
-                <span>GSAP</span>
-              </div>
+                <div className="skills-modern">
+                  {RenderSkillFrontEnd()}
+                  {RenderSkillInterface()}
+                  {RenderSkillBackEnd()}
+                  {RenderSkillDatabase()}
+                  {RenderSkillDevops()}
+                </div>
 
-              <div className="skill-item">
-                <Layers3 size={28} />
-                <span>Swiper</span>
-              </div>
-
-              <div className="skill-item">
-                <Palette size={28} />
-                <span>Tailwind CSS</span>
-              </div>
-
-              <div className="skill-item">
-                <Palette size={28} />
-                <span>Bootstrap</span>
-              </div>
-
-              <div className="skill-item">
-                <Layers3 size={28} />
-                <span>Ant Design</span>
-              </div>
-
-              <div className="skill-item">
-                <Code2 size={28} />
-                <span>Responsive Design</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="skill-category">
-          <div className="skill-number">03</div>
-
-          <div className="skill-content">
-            <span className="skill-label">BACKEND</span>
-
-            <h3>Backend Development</h3>
-
-            <div className="skill-list">
-              <div className="skill-item">
-                <Server size={28} />
-                <span>Laravel</span>
-              </div>
-
-              <div className="skill-item">
-                <FileCode2 size={28} />
-                <span>PHP</span>
-              </div>
-
-              <div className="skill-item">
-                <Server size={28} />
-                <span>Node.js</span>
-              </div>
-
-              <div className="skill-item">
-                <Server size={28} />
-                <span>Express.js</span>
-              </div>
-
-              <div className="skill-item">
-                <Braces size={28} />
-                <span>REST API</span>
+                <div className="skills-marquee">
+                  <div className="marquee-track">
+                    <span>REACT</span>
+                    <span>JAVASCRIPT</span>
+                    <span>GSAP</span>
+                    <span>NEXT.JS</span>
+                    <span>LARAVEL</span>
+                    <span>NODE.JS</span>
+                    <span>MYSQL</span>
+                    <span>REACT</span>
+                    <span>JAVASCRIPT</span>
+                    <span>GSAP</span>
+                    <span>NEXT.JS</span>
+                    <span>LARAVEL</span>
+                    <span>NODE.JS</span>
+                    <span>MYSQL</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-
-        <div className="skill-category">
-          <div className="skill-number">04</div>
-
-          <div className="skill-content">
-            <span className="skill-label">DATABASE</span>
-
-            <h3>Database</h3>
-
-            <div className="skill-list">
-              <div className="skill-item">
-                <Database size={28} />
-                <span>MySQL</span>
-              </div>
-
-              <div className="skill-item">
-                <Database size={28} />
-                <span>PostgreSQL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="skill-category">
-          <div className="skill-number">05</div>
-
-          <div className="skill-content">
-            <span className="skill-label">DEVOPS & TOOLS</span>
-
-            <h3>Development & Deployment</h3>
-
-            <div className="skill-list">
-              <div className="skill-item">
-                <GitBranch size={28} />
-                <span>Git</span>
-              </div>
-
-              <div className="skill-item">
-                <Github size={28} />
-                <span>GitHub</span>
-              </div>
-
-              <div className="skill-item">
-                <Terminal size={28} />
-                <span>Jenkins</span>
-              </div>
-
-              <div className="skill-item">
-                <Container size={28} />
-                <span>Docker</span>
-              </div>
-
-              <div className="skill-item">
-                <Terminal size={28} />
-                <span>Linux</span>
-              </div>
-
-              <div className="skill-item">
-                <Server size={28} />
-                <span>Apache</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="skills-marquee">
-        <div className="marquee-track">
-          <span>REACT</span>
-          <span>JAVASCRIPT</span>
-          <span>GSAP</span>
-          <span>NEXT.JS</span>
-          <span>LARAVEL</span>
-          <span>NODE.JS</span>
-          <span>MYSQL</span>
-          <span>REACT</span>
-          <span>JAVASCRIPT</span>
-          <span>GSAP</span>
-          <span>NEXT.JS</span>
-          <span>LARAVEL</span>
-          <span>NODE.JS</span>
-          <span>MYSQL</span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

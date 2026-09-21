@@ -1,153 +1,232 @@
-.skills-section 
-    background: #0d0d0d
-    color: white
+img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+video 
+    width: 100%
+    height: 100%
+    object-fit: contain
+    
+.skills 
+    width: 100vw
+    position: relative
+    min-height: 100vh
+    height: unset
     overflow: hidden
+    background: g.$bg
 
-    .skills-header 
+    .wrapper-container
+        width: 100%
+        min-height: 100vh
         display: flex
-        justify-content: space-between
-        align-items: flex-end
-        margin-top: 55px
-        margin-bottom: 80px
-        gap: 50px
+        justify-content: center
+        position: relative
 
-        h2 
-            font-size: clamp(45px, 6vw, 90px)
-            line-height: 1
-            letter-spacing: -0.06em
-            margin: 0
+        .content-mb 
+            width: min(88.5vh, 120vw)
+            min-height: 100vh
+            height: min(78.356vh, 139.3vw)
+            // height: min(56.25vh, 100vh)
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            overflow: hidden
+            
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .center-container
+                    position: relative
+                    width: min(64.625vh, 90vw)
+                    height: min(78.356vh, 139.3vw)
+                    z-index: 1
 
-            i 
-                font-family: "Playfair Display", serif
-                font-weight: 500
-                color: g.$lime
+                    .skills-header 
+                        display: flex
+                        justify-content: space-between
+                        // align-items: flex-end
+                        flex-direction: column
 
-        p 
-            max-width: 380px
-            color: #8f8f8f
-            font-size: 14px
-            line-height: 1.7
-            margin: 0
+                        .title-wraper
 
-    .skills-modern 
-        border-top: 1px solid rgba(255, 255, 255, 0.12)
+                            .title-1
+                                font-size: min(11.363vh, 20.2vw)
+                                font-family: "Playfair Display", serif
+                                font-weight: 500
+                                line-height: 0.9em
+                                letter-spacing: 0.010em
+                                color: g.$lime
+                                text-transform: uppercase
+                            
+                            .title-2
+                                font-size: min(11.363vh, 20.2vw)
+                                font-family: "Playfair Display", serif
+                                font-weight: 500
+                                line-height: 1em
+                                letter-spacing: 0.010em
+                                color: g.$lime
+                                text-transform: uppercase
 
-        .skill-category 
-            display: grid
-            grid-template-columns: 100px minmax(250px, 1fr) 2fr
-            gap: 40px
-            padding: 45px 0
-            border-bottom: 1px solid rgba(255, 255, 255, 0.12)
-            transition: background 0.4s ease, padding 0.4s ease
+                            .title-3
+                                font-size: min(13.556vh, 24.1vw)
+                                font-family: "Playfair Display", serif
+                                font-weight: 500
+                                line-height: 0.9em
+                                letter-spacing: -0.005em
 
-            &:hover 
-                padding-left: 20px
-                background: rgba(255, 255, 255, 0.02)
+                            .title-4
+                                font-size: min(9.056vh, 16.1vw)
+                                font-family: "Playfair Display", serif
+                                font-weight: 500
+                                line-height: 1em
+                                letter-spacing: 0.008em
 
-            .skill-number 
-                font-family: "DM Mono", monospace
-                font-size: 12px
-                color: g.$lime
-                padding-top: 5px
+                            .title-5
+                                font-size: min(9.112vh, 16.2vw)
+                                font-family: "Playfair Display", serif
+                                font-weight: 500
+                                line-height: 1.1em
+                                letter-spacing: 0.008em
 
-            .skill-content 
-                grid-column: 2 / 4
-                display: grid
-                grid-template-columns: minmax(250px, 1fr) 2fr
-                gap: 40px
+                        p 
+                            color: #8f8f8f
+                            font-size: min(3.043vh, 5.41vw)
+                            line-height: 1.5em
+                            margin-block-start: 1.3em
+                        
+                    .skills-marquee 
+                        width: 100%
+                        overflow: hidden
+                        border-top: 1px solid rgba(255, 255, 255, 0.1)
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+                        padding: 25px 0
 
-                .skill-label 
-                    font-family: "DM Mono", monospace
-                    font-size: 10px
-                    letter-spacing: 1px
-                    color: #777
+                        .marquee-track 
+                            display: flex
+                            width: max-content
+                            gap: 50px
+                            animation: marquee 25s linear infinite
 
-                h3
-                    grid-column: 1
-                    font-size: clamp(28px, 3vw, 45px)
-                    letter-spacing: -0.05em
-                    margin: 15px 0 0
+                        .marquee-track span 
+                            font-size: clamp(25px, 4vw, 55px)
+                            font-weight: 700
+                            letter-spacing: -0.05em
+                            color: transparent
+                            -webkit-text-stroke: 1px #555
+                            white-space: nowrap
 
-                .skill-list 
-                    grid-column: 2
-                    display: grid
-                    grid-template-columns: repeat(3, 1fr)
-                    gap: 12px
-                    padding-top: 20px
+                        .marquee-track span:nth-child(odd) 
+                            color: g.$lime
+                            -webkit-text-stroke: 0
 
-                    .skill-item 
-                        min-width: 100px
-                        min-height: 100px
+                        @keyframes marquee 
+                            from 
+                                transform: translateX(0)
+                            
+                            to 
+                                transform: translateX(-50%)
+
+                .skills-frontEnd
+                    border-top: 1px solid rgba(255, 255, 255, 0.12)
+                    position: absolute
+                    background: #6c6c6c
+                    width: 100vw
+                    min-height: 100vh
+                    height: 100vh
+                    display: none
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    overflow: hidden
+                    top: 0
+                    z-index: 2
+
+                    .center-skill-category 
                         display: flex
                         flex-direction: column
-                        align-items: center
-                        justify-content: center
-                        gap: 12px
-                        border: 1px solid rgba(255, 255, 255, 0.12)
-                        border-radius: 10px
-                        color: #bdbdbd
-                        transition: all 0.3s ease
-                        cursor: default
-
-                        svg 
-                            color: g.$lime
-                            transition: transform 0.3s ease
-
-                        span 
-                            font-family: "DM Mono", monospace
-                            font-size: 10px
-                            text-align: center
-                            color: #bdbdbd
+                        position: relative
+                        width: min(64.625vh, 90vw)
+                        height: min(78.356vh, 139.3vw)
+                        // display: grid
+                        // grid-template-columns: 100px minmax(250px, 1fr) 2fr
+                        // gap: 40px
+                        // padding: 45px 0
+                        // border-bottom: 1px solid rgba(255, 255, 255, 0.12)
+                        // transition: background 0.4s ease, padding 0.4s ease
 
                         &:hover 
-                            background: g.$lime
-                            border-color: g.$lime
-                            transform: translateY(-5px)
+                            padding-left: 20px
+                            background: rgba(255, 255, 255, 0.02)
 
-                        &:hover span 
-                            color: #111
+                        .skill-content 
+                            display: flex
+                            flex-direction: column
+                            // grid-column: 2 / 4
+                            // display: grid
+                            // grid-template-columns: minmax(250px, 1fr) 2fr
+                            // gap: 40px
 
-                            &:hover 
-                                background: g.$lime
-                                color: #111
-                                border-color: g.$lime
-                                transform: translateY(-3px)
+                            .title-1
+                                grid-column: 1
+                                font-size: clamp(28px, 3vw, 45px)
+                                letter-spacing: -0.05em
+                                margin: 15px 0 0
 
-                        &:hover svg 
-                            color: #111
-                            transform: scale(1.15)
+                            .title-2
+                                grid-column: 1
+                                font-size: clamp(28px, 3vw, 45px)
+                                letter-spacing: -0.05em
+                                margin: 15px 0 0
+
+                            .skill-list 
+                                grid-column: 2
+                                display: grid
+                                grid-template-columns: repeat(3, 1fr)
+                                gap: 12px
+                                padding-top: 20px
+
+                                .skill-item 
+                                    min-width: 100px
+                                    min-height: 100px
+                                    display: flex
+                                    flex-direction: column
+                                    align-items: center
+                                    justify-content: center
+                                    gap: 12px
+                                    border: 1px solid rgba(255, 255, 255, 0.12)
+                                    border-radius: 10px
+                                    color: #bdbdbd
+                                    transition: all 0.3s ease
+                                    cursor: default
+
+                                    svg 
+                                        color: g.$lime
+                                        transition: transform 0.3s ease
+
+                                    span 
+                                        font-family: "DM Mono", monospace
+                                        font-size: 10px
+                                        text-align: center
+                                        color: #bdbdbd
+
+                                    &:hover 
+                                        background: g.$lime
+                                        border-color: g.$lime
+                                        transform: translateY(-5px)
+
+                                    &:hover span 
+                                        color: #111
+
+                                        &:hover 
+                                            background: g.$lime
+                                            color: #111
+                                            border-color: g.$lime
+                                            transform: translateY(-3px)
+
+                                    &:hover svg 
+                                        color: #111
+                                        transform: scale(1.15)
 
 
-    .skills-marquee 
-        margin-top: 100px
-        width: 100%
-        overflow: hidden
-        border-top: 1px solid rgba(255, 255, 255, 0.1)
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
-        padding: 25px 0
-
-    .marquee-track 
-        display: flex
-        width: max-content
-        gap: 50px
-        animation: marquee 25s linear infinite
-
-    .marquee-track span 
-        font-size: clamp(25px, 4vw, 55px)
-        font-weight: 700
-        letter-spacing: -0.05em
-        color: transparent
-        -webkit-text-stroke: 1px #555
-        white-space: nowrap
-
-    .marquee-track span:nth-child(odd) 
-        color: g.$lime
-        -webkit-text-stroke: 0
-
-    @keyframes marquee 
-        from 
-            transform: translateX(0)
-        
-        to 
-            transform: translateX(-50%)
+                    
   
