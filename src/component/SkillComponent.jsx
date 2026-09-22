@@ -322,7 +322,7 @@ function initDesktopAnimation() {
       end: "+=500",
       pin: true,
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -333,7 +333,7 @@ function initDesktopAnimation() {
       end: "+=500",
       pin: true,
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -344,7 +344,7 @@ function initDesktopAnimation() {
       end: "+=500",
       pin: true,
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -355,7 +355,7 @@ function initDesktopAnimation() {
       end: "+=500",
       pin: true,
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
 
