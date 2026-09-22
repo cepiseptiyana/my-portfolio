@@ -6,10 +6,6 @@ import HeroComponent from "./component/HeroComponent";
 import AboutComponent from "./component/AboutComponent";
 import SkillComponent from "./component/SkillComponent";
 import ExperienceComponent from "./component/ExperienceComponent";
-import ProjectComponent from "./component/ProjectComponent";
-import ProcessComponent from "./component/ProcessComponent";
-import PlaygroundComponent from "./component/PlaygroundComponent";
-import ContactComponent from "./component/ContactComponent";
 
 export default function App() {
   const root = useRef(null);
@@ -21,15 +17,15 @@ export default function App() {
           CEPI<span>®</span>
         </a>
 
-        <div className="nav-links">
+        {/* <div className="nav-links">
           <a href="#about">About</a>
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
-        </div>
+        </div> */}
 
-        <a className="nav-dot" href="#contact">
+        {/* <a className="nav-dot" href="#contact">
           Let's talk <span>↗</span>
-        </a>
+        </a> */}
       </nav>
 
       <main>
@@ -37,10 +33,6 @@ export default function App() {
         <AboutComponent />
         <SkillComponent />
         <ExperienceComponent />
-        {/* <ProjectComponent /> */}
-        {/* <ProcessComponent /> */}
-        {/* <PlaygroundComponent /> */}
-        {/* <ContactComponent Wave={Wave} /> */}
       </main>
 
       {/* <footer>

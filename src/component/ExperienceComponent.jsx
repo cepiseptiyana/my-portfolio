@@ -66,7 +66,7 @@ function RenderExperienceContent() {
       getExperiencePoints,
     ] of getData.experience_points.entries()) {
       element_experience_points.push(
-        <div key={index}>
+        <div className="wraper-experience-point" key={index}>
           <span>●</span>
           <div className="decs-experience-point">{getExperiencePoints}</div>
         </div>
@@ -92,11 +92,6 @@ function RenderExperienceContent() {
   for (const [index, getData] of data.entries()) {
     element_experience_list.push(
       <article className="experience-card" key={index}>
-        {/* <div className="experience-meta">
-          <span className="experience-number">0{index + 1}</span>
-          <span className="experience-period">{getData.periode}</span>
-        </div> */}
-
         <div className="experience-content">
           <div className="title-experience">{getData.title}</div>
           <div className="experience-role-label">{getData.status}</div>
@@ -142,6 +137,31 @@ export default function ExperienceComponent() {
 
           {device === "mb" && (
             <div className="content-mb">
+              <div className="center-container">
+                <div className="experience-main">
+                  <div className="experience-title">
+                    <div className="title-1">Where I gained</div>
+                    <div className="title-2">Real-world Experience.</div>
+                    <div className="title-desc">
+                      Practical experience working as a Front-End Engineer,
+                      developing interfaces, maintaining existing codebases, and
+                      collaborating on web application projects.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="experience-list">
+                  {RenderExperienceContent()}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* =====================
+              DEKSTOP
+          ===================== */}
+          {device === "pc" && (
+            <div className="content-pc">
               <div className="center-container">
                 <div className="experience-main">
                   <div className="experience-title">

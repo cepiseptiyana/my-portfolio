@@ -272,9 +272,12 @@ export default function AboutComponent() {
                       </a>
 
                       <div className="desc-about">
-                        I am a Junior Web Developer with experience as a
-                        Front-End Engineer, focused on developing web
-                        applications and responsive user interfaces.
+                        I am a Junior Web Developer with professional experience
+                        as a Front-End Engineer, focused on building responsive
+                        web applications. I work with React.js, Vue.js, Next.js,
+                        and JavaScript, with experience integrating REST APIs. I
+                        am also expanding my skills in back-end development with
+                        Node.js, Express.js, Laravel, and SQL databases.
                       </div>
 
                       <div className="arrow_bottom">
@@ -330,9 +333,20 @@ export default function AboutComponent() {
                       </a>
 
                       <div className="desc-about">
-                        I am a Junior Web Developer with experience as a
-                        Front-End Engineer, focused on developing web
+                        I am a Junior Web Developer with professional experience
+                        as a Front-End Engineer, focused on building web
                         applications and responsive user interfaces.
+                      </div>
+
+                      <div className="desc-about-2">
+                        I have experience working with React.js, Vue.js,
+                        Next.js, and JavaScript, as well REST API integration
+                        and database management. With a strong interest in
+                        Full-Stack Development, I am expanding my skills in
+                        back-end technologies such as Node.js, Express.js,
+                        Laravel, and SQL databases. I enjoy building clean,
+                        interactive, and maintainable applications while
+                        continuously learning and improving as a developer.
                       </div>
                     </div>
                   </div>
