@@ -51,11 +51,11 @@ function RenderSkillFrontEnd() {
     },
   ];
 
-  for (const skills of skill_frontEnd) {
+  for (const [index, skills] of skill_frontEnd.entries()) {
     const Icon = skills.icon;
 
     element.push(
-      <div className="skill-item" key={skills.name}>
+      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
       </div>
@@ -63,7 +63,7 @@ function RenderSkillFrontEnd() {
   }
 
   return (
-    <div className="skill-category">
+    <div className="skill-category skill-category-1">
       <div className="skill-content">
         <div className="title-1">Front end</div>
         <div className="title-2">Development</div>
@@ -103,11 +103,11 @@ function RenderSkillInterface() {
     },
   ];
 
-  for (const skills of skill_interface) {
+  for (const [index, skills] of skill_interface.entries()) {
     const Icon = skills.icon;
 
     element.push(
-      <div className="skill-item" key={skills.name}>
+      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
       </div>
@@ -115,7 +115,7 @@ function RenderSkillInterface() {
   }
 
   return (
-    <div className="skill-category">
+    <div className="skill-category skill-category-2">
       <div className="skill-content">
         <div className="title-1">Interface &</div>
         <div className="title-2">Animation</div>
@@ -151,11 +151,11 @@ function RenderSkillBackEnd() {
     },
   ];
 
-  for (const skills of skill_backend) {
+  for (const [index, skills] of skill_backend.entries()) {
     const Icon = skills.icon;
 
     element.push(
-      <div className="skill-item" key={skills.name}>
+      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
       </div>
@@ -163,7 +163,7 @@ function RenderSkillBackEnd() {
   }
 
   return (
-    <div className="skill-category">
+    <div className="skill-category skill-category-3">
       <div className="skill-content">
         <div className="title-1">Backend</div>
         <div className="title-2">Development</div>
@@ -187,11 +187,11 @@ function RenderSkillDatabase() {
     },
   ];
 
-  for (const skills of skill_database) {
+  for (const [index, skills] of skill_database.entries()) {
     const Icon = skills.icon;
 
     element.push(
-      <div className="skill-item" key={skills.name}>
+      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
       </div>
@@ -199,7 +199,7 @@ function RenderSkillDatabase() {
   }
 
   return (
-    <div className="skill-category">
+    <div className="skill-category skill-category-4">
       <div className="skill-content">
         <div className="title-1">Database</div>
         <div className="skill-list">{element}</div>
@@ -238,11 +238,11 @@ function RenderSkillDevops() {
     },
   ];
 
-  for (const skills of skill_devops) {
+  for (const [index, skills] of skill_devops.entries()) {
     const Icon = skills.icon;
 
     element.push(
-      <div className="skill-item" key={skills.name}>
+      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
       </div>
@@ -250,7 +250,7 @@ function RenderSkillDevops() {
   }
 
   return (
-    <div className="skill-category">
+    <div className="skill-category skill-category-5">
       <div className="skill-content">
         <div className="title-1">DEVOPS &</div>
         <div className="title-2">TOOLS</div>
@@ -292,7 +292,243 @@ function initMobileAnimation() {
   });
 }
 
-function initDesktopAnimation() {}
+function initDesktopAnimation() {
+  const scrollTrigger = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skills-header",
+      start: "top +=200",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  const scrollTrigger_skillCategory_1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-category-1",
+      start: "top +=40",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  const scrollTrigger_skillCategory_2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-category-2",
+      start: "top +=40",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      markers: true,
+    },
+  });
+
+  const scrollTrigger_skillCategory_3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-category-3",
+      start: "top +=40",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      markers: true,
+    },
+  });
+
+  const scrollTrigger_skillCategory_4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-category-4",
+      start: "top +=40",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      markers: true,
+    },
+  });
+
+  const scrollTrigger_skillCategory_5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-category-5",
+      start: "top +=40",
+      end: "+=500",
+      pin: true,
+      scrub: 1,
+      markers: true,
+    },
+  });
+
+  scrollTrigger.set(".skills-header", {
+    opacity: 0,
+  });
+
+  scrollTrigger.to(".skills-header", {
+    opacity: 1,
+  });
+
+  //
+
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-1", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-2", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-3", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-4", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-5", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_1.set(".skill-category-1 .skill-item-6", {
+    opacity: 0,
+  });
+
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-1", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-2", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-3", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-4", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-5", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_2.set(".skill-category-2 .skill-item-6", {
+    opacity: 0,
+  });
+
+  scrollTrigger_skillCategory_3.set(".skill-category-3 .skill-item-1", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_3.set(".skill-category-3 .skill-item-2", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_3.set(".skill-category-3 .skill-item-3", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_3.set(".skill-category-3 .skill-item-4", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_3.set(".skill-category-3 .skill-item-5", {
+    opacity: 0,
+  });
+
+  scrollTrigger_skillCategory_4.set(".skill-category-4 .skill-item-1", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_4.set(".skill-category-4 .skill-item-2", {
+    opacity: 0,
+  });
+
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-1", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-2", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-3", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-4", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-5", {
+    opacity: 0,
+  });
+  scrollTrigger_skillCategory_5.set(".skill-category-5 .skill-item-6", {
+    opacity: 0,
+  });
+
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-1", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-2", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-3", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-4", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-5", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_1.to(".skill-category-1 .skill-item-6", {
+    opacity: 1,
+  });
+
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-1", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-2", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-3", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-4", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-5", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_2.to(".skill-category-2 .skill-item-6", {
+    opacity: 1,
+  });
+
+  scrollTrigger_skillCategory_3.to(".skill-category-3 .skill-item-1", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_3.to(".skill-category-3 .skill-item-2", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_3.to(".skill-category-3 .skill-item-3", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_3.to(".skill-category-3 .skill-item-4", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_3.to(".skill-category-3 .skill-item-5", {
+    opacity: 1,
+  });
+
+  scrollTrigger_skillCategory_4.to(".skill-category-4 .skill-item-1", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_4.to(".skill-category-4 .skill-item-2", {
+    opacity: 1,
+  });
+
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-1", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-2", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-3", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-4", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-5", {
+    opacity: 1,
+  });
+  scrollTrigger_skillCategory_5.to(".skill-category-5 .skill-item-6", {
+    opacity: 1,
+  });
+}
 
 export default function SkillComponent() {
   const device = useDevice();
@@ -332,7 +568,7 @@ export default function SkillComponent() {
                     <div className="title-5">For the web</div>
                   </div>
 
-                  <p>
+                  <p className="title-desc">
                     A collection of technologies and tools I have worked with
                     throughout web development projects.
                   </p>
@@ -385,7 +621,7 @@ export default function SkillComponent() {
                     <div className="title-4">For the web</div>
                   </div>
 
-                  <p>
+                  <p className="title-desc">
                     A collection of technologies and tools I have worked with
                     throughout web development projects.
                   </p>
