@@ -16,10 +16,9 @@ import "../styles/skill_component.sass";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 import useDevice from "../hooks/useDevice";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 function RenderSkillFrontEnd() {
   let element = [];
