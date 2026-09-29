@@ -1,0 +1,366 @@
+// NOTE: tambahkan @use yang sama seperti di experience_component.sass agar g.$bg dan g.$lime terbaca
+
+.project
+    width: 100vw
+    position: relative
+    min-height: 100vh
+    height: unset
+    overflow: hidden
+    background: g.$bg
+
+    .wrapper-container
+        width: 100%
+        min-height: 100vh
+        display: flex
+        justify-content: center
+        position: relative
+
+        // ======================
+        // MOBILE
+        // ======================
+        .content-mb
+            width: min(88.5vh, 120vw)
+            min-height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            overflow: hidden
+            padding-bottom: 1.3em
+
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .center-container
+                    position: relative
+                    width: min(64.625vh, 90vw)
+                    z-index: 1
+
+                    .project-main
+                        width: 100%
+
+                        .project-title
+                            .title-1
+                                font-family: "Playfair Display", serif
+                                font-size: min(8.5vh, 15vw)
+                                margin: 0
+                                line-height: 1
+                                text-transform: uppercase
+                                letter-spacing: 0.01em
+
+                            .title-2
+                                font-family: "Playfair Display", serif
+                                font-size: min(9vw, 9vw)
+                                font-weight: 500
+                                color: g.$lime
+                                line-height: 0.999em
+                                margin-block-start: 0.3em
+
+                            .title-desc
+                                font-weight: 500
+                                font-size: min(2.2vh, 4vw)
+                                margin-block-start: 0.7em
+                                color: #8f8f8f
+
+                    // semua card menempati satu cell grid -> tinggi = card tertinggi
+                    .project-stack
+                        display: grid
+                        margin-block-start: 1.4em
+                        overflow: hidden
+
+                        .project-card
+                            grid-area: 1 / 1
+                            background: g.$bg
+                            border: 1px solid rgba(255, 255, 255, 0.15)
+                            will-change: transform
+
+                            .project-content
+                                color: #8f8f8f
+                                padding: 1.1em
+
+                                .project-head
+                                    display: flex
+                                    justify-content: space-between
+                                    align-items: baseline
+
+                                    .project-index
+                                        font-family: "Playfair Display", serif
+                                        font-size: min(5vh, 9vw)
+                                        color: g.$lime
+                                        line-height: 1
+
+                                    .project-year
+                                        font-family: "DM Mono", monospace
+                                        font-size: min(1.744vh, 3.1vw)
+                                        letter-spacing: 1px
+
+                                .title-project
+                                    font-size: min(3.6vh, 6.6vw)
+                                    letter-spacing: -0.03em
+                                    font-weight: 500
+                                    color: g.$lime
+                                    margin-block-start: 0.5em
+
+                                .project-role-label
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(1.744vh, 3.1vw)
+                                    letter-spacing: 1px
+                                    margin-block-start: 0.4em
+
+                                .project-media
+                                    width: 100%
+                                    height: min(17vh, 40vw)
+                                    margin-block-start: 1em
+                                    overflow: hidden
+                                    border: 1px solid rgba(255, 255, 255, 0.15)
+
+                                    img
+                                        width: 100%
+                                        height: 100%
+                                        object-fit: cover
+                                        object-position: top
+                                        display: block
+
+                                .project-points
+                                    display: grid
+                                    grid-template-columns: 1fr
+                                    border-top: 1px solid rgba(255, 255, 255, 0.1)
+                                    margin-block-start: 1.2em
+
+                                    .wraper-project-point
+                                        display: flex
+                                        gap: 0.8em
+                                        padding: 0.7em 0
+                                        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+                                        span
+                                            color: g.$lime
+
+                                        .decs-project-point
+                                            color: #aaa
+                                            font-size: min(1.8vh, 3.2vw)
+                                            line-height: 1.6
+
+                                .project-tech
+                                    display: flex
+                                    flex-wrap: wrap
+                                    gap: 8px
+                                    margin-block-start: 1em
+
+                                    .desc-project-tech
+                                        font-size: min(1.6vh, 2.8vw)
+                                        color: #aaa
+                                        border: 1px solid rgba(255, 255, 255, 0.15)
+                                        padding: 6px 12px
+                                        border-radius: 50px
+                                        transition: 0.3s ease
+
+                                        &:hover
+                                            background: g.$lime
+                                            color: #111
+                                            border-color: g.$lime
+                                            transform: translateY(-3px)
+
+                                .project-link
+                                    display: inline-block
+                                    margin-block-start: 1em
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(1.744vh, 3.1vw)
+                                    color: g.$lime
+                                    text-decoration: none
+                                    border-bottom: 1px solid g.$lime
+
+                    .project-progress
+                        width: 100%
+                        height: 1px
+                        margin-block-start: 1.4em
+                        background: rgba(255, 255, 255, 0.15)
+
+                        .project-progress-bar
+                            width: 100%
+                            height: 100%
+                            background: g.$lime
+                            transform-origin: left center
+                            transform: scaleX(0)
+
+        // ======================
+        // PC
+        // ======================
+        .content-pc
+            position: relative
+            width: 100vw
+            height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            gap: 3vh
+
+            .center-container
+                position: relative
+                width: min(158.222vh, 89vw)
+                z-index: 2
+
+                .project-main
+                    width: 100%
+
+                    .project-title
+                        display: flex
+                        justify-content: space-between
+                        align-items: flex-end
+
+                        .title-1
+                            font-family: "Playfair Display", serif
+                            font-size: min(7.4vh, 4.2vw)
+                            margin: 0
+                            line-height: 1
+                            text-transform: uppercase
+                            letter-spacing: 0.01em
+
+                        .title-2
+                            font-family: "Playfair Display", serif
+                            font-size: min(7.4vh, 4.2vw)
+                            font-weight: 500
+                            color: g.$lime
+                            line-height: 0.999em
+
+                        .title-desc
+                            font-weight: 500
+                            font-size: min(2.133vh, 1.2vw)
+                            color: #8f8f8f
+                            width: min(48vh, 27vw)
+
+                .project-progress
+                    width: 100%
+                    height: 1px
+                    background: rgba(255, 255, 255, 0.15)
+
+                    .project-progress-bar
+                        width: 100%
+                        height: 100%
+                        background: g.$lime
+                        transform-origin: left center
+                        transform: scaleX(0)
+
+            // viewport selebar layar, track digeser oleh GSAP
+            .project-viewport
+                width: 100vw
+                position: relative
+                z-index: 1
+
+                .project-track
+                    display: flex
+                    align-items: stretch
+                    gap: min(4vh, 2.2vw)
+                    width: max-content
+                    padding-inline: calc((100vw - min(158.222vh, 89vw)) / 2)
+                    will-change: transform
+
+                    .project-card
+                        flex: 0 0 auto
+                        width: min(96vh, 54vw)
+                        background: g.$bg
+                        border: 1px solid rgba(255, 255, 255, 0.15)
+                        will-change: transform, opacity
+
+                        .project-content
+                            color: #8f8f8f
+                            padding: min(3.2vh, 1.8vw)
+                            height: 100%
+                            display: flex
+                            flex-direction: column
+
+                            .project-head
+                                display: flex
+                                justify-content: space-between
+                                align-items: baseline
+
+                                .project-index
+                                    font-family: "Playfair Display", serif
+                                    font-size: min(4.5vh, 2.5vw)
+                                    color: g.$lime
+                                    line-height: 1
+
+                                .project-year
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(2.133vh, 1.2vw)
+                                    letter-spacing: 1px
+
+                            .title-project
+                                font-size: min(4.54vh, 2.554vw)
+                                letter-spacing: 0.01em
+                                font-weight: 500
+                                color: g.$lime
+                                margin-block-start: 0.6em
+
+                            .project-role-label
+                                font-family: "DM Mono", monospace
+                                font-size: min(2.133vh, 1.2vw)
+                                letter-spacing: 1px
+                                margin-block-start: 0.2em
+
+                            .project-media
+                                width: 100%
+                                height: min(26vh, 14vw)
+                                margin-block-start: min(1.6vh, 0.9vw)
+                                overflow: hidden
+                                border: 1px solid rgba(255, 255, 255, 0.15)
+
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
+                                    object-position: top
+                                    display: block
+                                    will-change: transform
+
+                            .project-points
+                                display: grid
+                                grid-template-columns: 1fr 1fr
+                                border-top: 1px solid rgba(255, 255, 255, 0.1)
+                                margin-block-start: min(1.6vh, 0.9vw)
+
+                                .wraper-project-point
+                                    display: flex
+                                    gap: 0.8em
+                                    padding: 0.7em 1em
+                                    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+                                    span
+                                        color: g.$lime
+
+                                    .decs-project-point
+                                        color: #aaa
+                                        font-size: min(1.9vh, 1.05vw)
+                                        line-height: 1.6
+
+                                .wraper-project-point:nth-child(odd)
+                                    border-right: 1px solid rgba(255, 255, 255, 0.1)
+
+                            .project-tech
+                                display: flex
+                                flex-wrap: wrap
+                                gap: 10px
+                                margin-block-start: auto
+                                padding-block-start: 1.2em
+
+                                .desc-project-tech
+                                    font-size: min(1.688vh, 0.95vw)
+                                    color: #aaa
+                                    border: 1px solid rgba(255, 255, 255, 0.15)
+                                    padding: 8px 14px
+                                    border-radius: 50px
+                                    transition: 0.3s ease
+
+                                    &:hover
+                                        background: g.$lime
+                                        color: #111
+                                        border-color: g.$lime
+                                        transform: translateY(-3px)
+
+                            .project-link
+                                align-self: flex-start
+                                margin-block-start: 1em
+                                font-family: "DM Mono", monospace
+                                font-size: min(2.133vh, 1.2vw)
+                                color: g.$lime
+                                text-decoration: none
+                                border-bottom: 1px solid g.$lime

@@ -6,6 +6,7 @@ import HeroComponent from "./component/HeroComponent";
 import AboutComponent from "./component/AboutComponent";
 import SkillComponent from "./component/SkillComponent";
 import ExperienceComponent from "./component/ExperienceComponent";
+import ProjectExperienceComponent from "./component/ProjectExperienceComponent";
 
 export default function App() {
   const root = useRef(null);
@@ -33,6 +34,7 @@ export default function App() {
         <AboutComponent />
         <SkillComponent />
         <ExperienceComponent />
+        <ProjectExperienceComponent />
       </main>
 
       {/* <footer>

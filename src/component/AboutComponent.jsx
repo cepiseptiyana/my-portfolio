@@ -251,7 +251,7 @@ export default function AboutComponent() {
             <div className="content-mb">
               <div className="center-container">
                 <div className="title-about">
-                  <div className="title-about-1">FRONT-END </div>
+                  <div className="title-about-1">JUNIOR</div>
                   <div className="title-about-2">WEB</div>
                   <div className="title-about-3">DEVELOPER</div>
                 </div>
@@ -313,8 +313,8 @@ export default function AboutComponent() {
               <div className="center-container">
                 {/* <h2 className="title-about">FRONT-END WEB DEVELOPER</h2> */}
                 <div className="title-about">
-                  <div className="title-about-1">FRONT-END WEB</div>
-                  <div className="title-about-2">DEVELOPER</div>
+                  <div className="title-about-1">JUNIOR WEB</div>
+                  <div className="title-about-3">DEVELOPER</div>
                 </div>
 
                 <div className="wraper-flex">
