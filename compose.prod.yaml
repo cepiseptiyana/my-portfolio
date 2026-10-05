@@ -1,0 +1,12 @@
+services:
+  prod:
+    container_name: my-portfolio-prod
+    image: cepiseptiyana/my-portfolio:latest
+    build:
+      context: .
+      dockerfile: docker/production/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: always
