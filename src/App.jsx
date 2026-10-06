@@ -7,6 +7,7 @@ import AboutComponent from "./component/AboutComponent";
 import SkillComponent from "./component/SkillComponent";
 import ExperienceComponent from "./component/ExperienceComponent";
 import ProjectExperienceComponent from "./component/ProjectExperienceComponent";
+import FooterComponent from "./component/FooterComponent";
 
 export default function App() {
   const root = useRef(null);
@@ -37,10 +38,7 @@ export default function App() {
         <ProjectExperienceComponent />
       </main>
 
-      {/* <footer>
-        <span>© 2026 CEPI PORTFOLIO</span>
-        <span>DESIGNED & BUILT WITH REACT + GSAP</span>
-      </footer> */}
+      <FooterComponent/>
     </div>
   );
 }

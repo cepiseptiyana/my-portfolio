@@ -35,9 +35,6 @@ const projects = [
     points: [
       "Developed the full-stack architecture using Laravel for secure backend APIs and React for the dynamic interface.",
       "Containerized the application with Docker, running Laravel, MySQL, and the React frontend as isolated services for a consistent development and deployment environment.",
-      "Built efficient job search and filtering algorithms handling data queries by keyword, location, and category.",
-      "Implemented secure User Authentication, Role Management, and Post a Job actions in the system backend.",
-      "Optimized database operations and ensured complete responsiveness across desktop and mobile devices.",
     ],
     tech: ["Laravel", "MySQL", "React.js", "Docker", "REST API", "JavaScript", "Tailwind/CSS"],
     link: "",

@@ -1,0 +1,256 @@
+// NOTE: tambahkan @use yang sama seperti di experience_component.sass agar g.$bg dan g.$lime terbaca
+
+.footer
+    width: 100vw
+    position: relative
+    min-height: 100vh
+    height: unset
+    overflow: hidden
+    background: g.$bg
+
+    .wrapper-container
+        width: 100%
+        min-height: 100vh
+        display: flex
+        justify-content: center
+        position: relative
+
+        // ======================
+        // MOBILE
+        // ======================
+        .content-mb
+            width: min(88.5vh, 120vw)
+            min-height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            overflow: hidden
+            padding-block: 4em 1.3em
+
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .center-container
+                    position: relative
+                    width: min(64.625vh, 90vw)
+                    z-index: 1
+
+                    .footer-main
+                        width: 100%
+
+                        .footer-title
+                            .title-1
+                                font-family: "Playfair Display", serif
+                                font-size: min(8.5vh, 15vw)
+                                margin: 0
+                                line-height: 1
+                                text-transform: uppercase
+                                letter-spacing: 0.01em
+
+                            .title-2
+                                font-family: "Playfair Display", serif
+                                font-size: min(9vw, 9vw)
+                                font-weight: 500
+                                color: g.$lime
+                                line-height: 0.999em
+                                margin-block-start: 0.3em
+
+                        .footer-email
+                            display: inline-block
+                            margin-block-start: 1.4em
+                            font-size: min(2.6vh, 5vw)
+                            font-weight: 500
+                            color: g.$lime
+                            text-decoration: none
+                            border-bottom: 1px solid g.$lime
+                            padding-block-end: 0.2em
+
+                    .footer-groups
+                        display: grid
+                        grid-template-columns: 1fr 1fr
+                        gap: 1.4em
+                        margin-block-start: 2.4em
+
+                        .footer-group
+                            .footer-group-label
+                                font-family: "DM Mono", monospace
+                                font-size: min(1.744vh, 3.1vw)
+                                letter-spacing: 1px
+                                color: #8f8f8f
+
+                            .footer-group-links
+                                display: flex
+                                flex-direction: column
+                                gap: 0.6em
+                                margin-block-start: 0.8em
+
+                                .footer-link
+                                    font-size: min(2vh, 4vw)
+                                    color: #aaa
+                                    text-decoration: none
+                                    transition: 0.3s ease
+
+                                    &:hover
+                                        color: g.$lime
+                                        transform: translateX(6px)
+
+                    .footer-line
+                        width: 100%
+                        height: 1px
+                        margin-block-start: 2.4em
+                        background: rgba(255, 255, 255, 0.15)
+                        transform-origin: left center
+
+                    .footer-bottom
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-block-start: 1.2em
+                        color: #8f8f8f
+
+                        .footer-copy
+                            font-family: "DM Mono", monospace
+                            font-size: min(1.6vh, 2.8vw)
+                            letter-spacing: 1px
+
+                        .footer-top
+                            font-family: "DM Mono", monospace
+                            font-size: min(1.6vh, 2.8vw)
+                            letter-spacing: 1px
+                            color: g.$lime
+                            background: none
+                            border: 1px solid rgba(255, 255, 255, 0.15)
+                            border-radius: 50px
+                            padding: 6px 14px
+                            cursor: pointer
+                            transition: 0.3s ease
+
+                            &:hover
+                                background: g.$lime
+                                color: #111
+                                border-color: g.$lime
+
+        // ======================
+        // PC
+        // ======================
+        .content-pc
+            position: relative
+            width: 100vw
+            min-height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .center-container
+                position: relative
+                width: min(158.222vh, 89vw)
+                z-index: 2
+
+                .footer-main
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: flex-end
+                    gap: 4vw
+
+                    .footer-title
+                        .title-1
+                            font-family: "Playfair Display", serif
+                            font-size: min(12vh, 6.8vw)
+                            margin: 0
+                            line-height: 1
+                            text-transform: uppercase
+                            letter-spacing: 0.01em
+
+                        .title-2
+                            font-family: "Playfair Display", serif
+                            font-size: min(12vh, 6.8vw)
+                            font-weight: 500
+                            color: g.$lime
+                            line-height: 0.999em
+                            margin-block-start: 0.15em
+
+                    .footer-side
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        gap: min(5vh, 2.8vw)
+                        width: min(48vh, 27vw)
+
+                        .footer-email
+                            font-size: min(2.8vh, 1.6vw)
+                            font-weight: 500
+                            color: g.$lime
+                            text-decoration: none
+                            border-bottom: 1px solid g.$lime
+                            padding-block-end: 0.2em
+                            transition: 0.3s ease
+
+                            &:hover
+                                letter-spacing: 0.02em
+
+                        .footer-groups
+                            display: grid
+                            grid-template-columns: 1fr 1fr
+                            gap: min(3vh, 1.7vw)
+                            width: 100%
+
+                            .footer-group
+                                .footer-group-label
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(2.133vh, 1.2vw)
+                                    letter-spacing: 1px
+                                    color: #8f8f8f
+
+                                .footer-group-links
+                                    display: flex
+                                    flex-direction: column
+                                    gap: 0.7em
+                                    margin-block-start: 1em
+
+                                    .footer-link
+                                        font-size: min(2.4vh, 1.35vw)
+                                        color: #aaa
+                                        text-decoration: none
+                                        transition: 0.3s ease
+
+                                        &:hover
+                                            color: g.$lime
+                                            transform: translateX(8px)
+
+                .footer-line
+                    width: 100%
+                    height: 1px
+                    margin-block-start: min(8vh, 4.5vw)
+                    background: rgba(255, 255, 255, 0.15)
+                    transform-origin: left center
+
+                .footer-bottom
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-block-start: min(2.4vh, 1.4vw)
+                    color: #8f8f8f
+
+                    .footer-copy
+                        font-family: "DM Mono", monospace
+                        font-size: min(1.9vh, 1.05vw)
+                        letter-spacing: 1px
+
+                    .footer-top
+                        font-family: "DM Mono", monospace
+                        font-size: min(1.9vh, 1.05vw)
+                        letter-spacing: 1px
+                        color: g.$lime
+                        background: none
+                        border: 1px solid rgba(255, 255, 255, 0.15)
+                        border-radius: 50px
+                        padding: 8px 18px
+                        cursor: pointer
+                        transition: 0.3s ease
+
+                        &:hover
+                            background: g.$lime
+                            color: #111
+                            border-color: g.$lime
+                            transform: translateY(-3px)
