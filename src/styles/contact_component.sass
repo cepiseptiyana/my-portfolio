@@ -1,0 +1,347 @@
+// NOTE: tambahkan @use yang sama seperti di experience_component.sass agar g.$bg dan g.$lime terbaca
+
+.contact
+    width: 100vw
+    position: relative
+    min-height: 100vh
+    height: unset
+    overflow: hidden
+    background: g.$bg
+
+    // ======================
+    // MARQUEE BACKGROUND (outline text raksasa)
+    // ======================
+    .contact-marquee
+        position: absolute
+        inset: 0
+        display: flex
+        align-items: center
+        pointer-events: none
+        z-index: 0
+
+        .contact-marquee-track
+            display: flex
+            width: max-content
+            will-change: transform
+
+            span
+                font-family: "Playfair Display", serif
+                font-size: min(34vh, 22vw)
+                line-height: 1
+                white-space: nowrap
+                color: transparent
+                -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07)
+
+    .wrapper-container
+        width: 100%
+        min-height: 100vh
+        display: flex
+        justify-content: center
+        position: relative
+        z-index: 1
+
+        // ======================
+        // MOBILE
+        // ======================
+        .content-mb
+            width: min(88.5vh, 120vw)
+            min-height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            overflow: hidden
+            padding-block: 4em 2em
+
+            @media screen and (max-width: 720px), screen and (orientation: portrait)
+                .center-container
+                    position: relative
+                    width: min(64.625vh, 90vw)
+                    z-index: 1
+
+                    .contact-main
+                        width: 100%
+
+                        .contact-title
+                            .title-1
+                                font-family: "Playfair Display", serif
+                                font-size: min(8.5vh, 15vw)
+                                margin: 0
+                                line-height: 1
+                                text-transform: uppercase
+                                letter-spacing: 0.01em
+
+                            .title-2
+                                font-family: "Playfair Display", serif
+                                font-size: min(9vw, 9vw)
+                                font-weight: 500
+                                color: g.$lime
+                                line-height: 0.999em
+                                margin-block-start: 0.3em
+
+                            .title-desc
+                                font-weight: 500
+                                font-size: min(2.2vh, 4vw)
+                                margin-block-start: 0.7em
+                                color: #8f8f8f
+
+                    .contact-info
+                        display: grid
+                        grid-template-columns: 1fr
+                        border-top: 1px solid rgba(255, 255, 255, 0.1)
+                        margin-block-start: 1.6em
+
+                        .contact-info-item
+                            padding: 0.8em 0
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+                            .contact-info-label
+                                display: flex
+                                align-items: center
+                                gap: 0.6em
+                                font-family: "DM Mono", monospace
+                                font-size: min(1.744vh, 3.1vw)
+                                letter-spacing: 1px
+                                color: #8f8f8f
+
+                            .contact-info-value
+                                display: block
+                                margin-block-start: 0.4em
+                                font-size: min(2vh, 4vw)
+                                color: #aaa
+                                text-decoration: none
+
+                            a.contact-info-value:hover
+                                color: g.$lime
+
+                    .contact-form
+                        margin-block-start: 1.8em
+
+                        .contact-field
+                            position: relative
+                            padding-block-end: 0.6em
+                            margin-block-end: 1.4em
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+                            .contact-label
+                                display: block
+                                font-family: "DM Mono", monospace
+                                font-size: min(1.744vh, 3.1vw)
+                                letter-spacing: 1px
+                                color: #8f8f8f
+
+                                &.active
+                                    color: g.$lime
+
+                            .contact-input
+                                width: 100%
+                                margin-block-start: 0.6em
+                                background: transparent
+                                border: none
+                                outline: none
+                                resize: none
+                                font-family: inherit
+                                font-size: min(2.2vh, 4.2vw)
+                                color: #ddd
+
+                            .contact-field-line
+                                position: absolute
+                                left: 0
+                                bottom: -1px
+                                width: 100%
+                                height: 1px
+                                background: g.$lime
+                                transform-origin: left center
+                                transform: scaleX(0)
+
+                        .contact-action
+                            display: flex
+                            align-items: center
+                            gap: 1em
+                            margin-block-start: 1.6em
+
+                            .contact-submit
+                                font-family: "DM Mono", monospace
+                                font-size: min(1.9vh, 3.4vw)
+                                letter-spacing: 1px
+                                color: #111
+                                background: g.$lime
+                                border: none
+                                border-radius: 50px
+                                padding: 14px 28px
+                                cursor: pointer
+
+                            .contact-status
+                                font-family: "DM Mono", monospace
+                                font-size: min(1.6vh, 2.8vw)
+                                color: #8f8f8f
+                                opacity: 0
+
+        // ======================
+        // PC
+        // ======================
+        .content-pc
+            position: relative
+            width: 100vw
+            height: 100vh
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+            .center-container
+                position: relative
+                width: min(158.222vh, 89vw)
+                z-index: 2
+
+                .contact-main
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    gap: 6vw
+
+                    .contact-left
+                        width: 46%
+
+                        .contact-title
+                            .title-1
+                                font-family: "Playfair Display", serif
+                                font-size: min(9vh, 5vw)
+                                margin: 0
+                                line-height: 1
+                                text-transform: uppercase
+                                letter-spacing: 0.01em
+
+                            .title-2
+                                font-family: "Playfair Display", serif
+                                font-size: min(9vh, 5vw)
+                                font-weight: 500
+                                color: g.$lime
+                                line-height: 0.999em
+                                margin-block-start: 0.15em
+
+                            .title-desc
+                                font-weight: 500
+                                font-size: min(2.133vh, 1.2vw)
+                                color: #8f8f8f
+                                width: min(52vh, 29vw)
+                                margin-block-start: min(2.4vh, 1.4vw)
+
+                        .contact-info
+                            display: grid
+                            grid-template-columns: 1fr
+                            border-top: 1px solid rgba(255, 255, 255, 0.1)
+                            margin-block-start: min(5vh, 2.8vw)
+
+                            .contact-info-item
+                                display: flex
+                                justify-content: space-between
+                                align-items: baseline
+                                padding: min(1.8vh, 1vw) 0
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+                                .contact-info-label
+                                    display: flex
+                                    align-items: center
+                                    gap: 0.7em
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(2.133vh, 1.2vw)
+                                    letter-spacing: 1px
+                                    color: #8f8f8f
+
+                                .contact-info-value
+                                    font-size: min(2.2vh, 1.25vw)
+                                    color: #aaa
+                                    text-decoration: none
+                                    transition: 0.3s ease
+
+                                a.contact-info-value:hover
+                                    color: g.$lime
+                                    transform: translateX(-6px)
+
+                    .contact-right
+                        width: 46%
+
+                        .contact-form
+                            width: 100%
+                            padding: min(4vh, 2.2vw)
+                            background: g.$bg
+                            border: 1px solid rgba(255, 255, 255, 0.15)
+
+                            .contact-field
+                                position: relative
+                                padding-block-end: 0.7em
+                                margin-block-end: min(3.2vh, 1.8vw)
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+
+                                .contact-label
+                                    display: block
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(2.133vh, 1.2vw)
+                                    letter-spacing: 1px
+                                    color: #8f8f8f
+                                    transition: color 0.3s ease
+
+                                    &.active
+                                        color: g.$lime
+
+                                .contact-input
+                                    width: 100%
+                                    margin-block-start: 0.6em
+                                    background: transparent
+                                    border: none
+                                    outline: none
+                                    resize: none
+                                    font-family: inherit
+                                    font-size: min(2.6vh, 1.45vw)
+                                    color: #ddd
+
+                                .contact-field-line
+                                    position: absolute
+                                    left: 0
+                                    bottom: -1px
+                                    width: 100%
+                                    height: 1px
+                                    background: g.$lime
+                                    transform-origin: left center
+                                    transform: scaleX(0)
+
+                            .contact-action
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                margin-block-start: min(3.6vh, 2vw)
+
+                                .contact-submit
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(2.133vh, 1.2vw)
+                                    letter-spacing: 1px
+                                    color: #111
+                                    background: g.$lime
+                                    border: none
+                                    border-radius: 50px
+                                    padding: min(2vh, 1.1vw) min(4vh, 2.2vw)
+                                    cursor: pointer
+                                    will-change: transform
+
+                                .contact-status
+                                    font-family: "DM Mono", monospace
+                                    font-size: min(1.9vh, 1.05vw)
+                                    color: #8f8f8f
+                                    opacity: 0
+
+// titik status "live" (dipakai mobile & pc)
+.contact-dot
+    position: relative
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: g.$lime
+    display: inline-block
+
+    .contact-dot-pulse
+        position: absolute
+        inset: 0
+        border-radius: 50%
+        background: g.$lime

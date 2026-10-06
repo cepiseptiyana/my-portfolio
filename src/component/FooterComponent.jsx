@@ -8,9 +8,6 @@ import useDevice from "../hooks/useDevice";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
-/* =====================
-   DATA (ganti dengan data kamu)
-===================== */
 const footerData = {
   email: "cepifams3@gmail.com",
   groups: [
@@ -32,9 +29,6 @@ const footerData = {
   ],
 };
 
-/* =====================
-   HELPERS
-===================== */
 function splitTitle() {
   const split = new SplitText(".footer-title-2", {
     type: "chars",
@@ -49,10 +43,6 @@ function handleBackToTop() {
   gsap.to(window, { scrollTo: 0, duration: 1.2, ease: "power3.inOut" });
 }
 
-/* =====================
-   MOBILE ANIMATION
-   Elemen muncul berurutan dari bawah saat footer masuk layar
-===================== */
 function initMobileAnimation() {
   const split = splitTitle();
 
@@ -104,10 +94,6 @@ function initMobileAnimation() {
   );
 }
 
-/* =====================
-   DESKTOP ANIMATION
-   Judul per huruf, kolom link masuk dari kanan, garis memanjang
-===================== */
 function initDekstopAnimation() {
   const split = splitTitle();
 
@@ -162,10 +148,6 @@ function initDekstopAnimation() {
   );
 }
 
-/* =====================
-   RENDER ELEMENT
-   Pakai for...of, hasil di-push ke array kosong
-===================== */
 function RenderElement(groups) {
   let element = [];
 
@@ -197,9 +179,6 @@ function RenderElement(groups) {
   return element;
 }
 
-/* =====================
-   COMPONENT
-===================== */
 export default function FooterComponent() {
   const root_footer = useRef(null);
   const device = useDevice();

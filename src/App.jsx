@@ -8,6 +8,7 @@ import SkillComponent from "./component/SkillComponent";
 import ExperienceComponent from "./component/ExperienceComponent";
 import ProjectExperienceComponent from "./component/ProjectExperienceComponent";
 import FooterComponent from "./component/FooterComponent";
+import ContactComponent from "./component/ContactComponent";
 
 export default function App() {
   const root = useRef(null);
@@ -36,6 +37,7 @@ export default function App() {
         <SkillComponent />
         <ExperienceComponent />
         <ProjectExperienceComponent />
+        <ContactComponent/>
       </main>
 
       <FooterComponent/>
