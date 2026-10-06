@@ -15,7 +15,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 COPY docker/production/nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html/my-portfolio
 
 EXPOSE 80
 
