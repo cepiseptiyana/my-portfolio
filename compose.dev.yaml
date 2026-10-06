@@ -3,11 +3,12 @@ services:
     container_name: my-portfolio-dev
     build:
       context: .
-      dockerfile: docker/development/Dockerfile
+      dockerfile: ./docker/common/Dockerfile
+      target: development
     ports:
-      - "5172:5172"
+      - "5173:5173"
     volumes:
-      - .:/app
+      - ./:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development
