@@ -209,7 +209,7 @@ function RenderProjectContent(device) {
   const isMobile = device === "mb";
 
   return projects.map((getData, index) => {
-    const points = isMobile ? getData.points.slice(0, 2) : getData.points;
+    const points = isMobile ? getData.points.slice(0, 1) : getData.points;
     const tech = isMobile ? getData.tech.slice(0, 4) : getData.tech;
 
     return (
