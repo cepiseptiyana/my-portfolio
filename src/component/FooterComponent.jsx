@@ -23,7 +23,7 @@ const footerData = {
       label: "Elsewhere",
       links: [
         { name: "GitHub", href: "https://github.com/cepiseptiyana" },
-        { name: "LinkedIn", href: "www.linkedin.com/in/cepi-septiyana" },
+        { name: "LinkedIn", href: "https://linkedin.com/in/cepi-septiyana" },
       ],
     },
   ],
