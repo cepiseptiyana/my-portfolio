@@ -1,81 +1,42 @@
-# 🚀 My Portfolio - React + Vite + GSAP
+# 🚀 My Portfolio - React + Vite + GSAP (Dockerized)
 
-Repository ini berisi kode sumber untuk website portofolio modern yang dibangun menggunakan **React (Vite)**, **GSAP** untuk animasi, dan **Sass** untuk styling. Seluruh lingkungan pengembangan dan produksi proyek ini sudah sepenuhnya dibungkus menggunakan **Docker** agar dapat dijalankan di komputer mana pun tanpa perlu menginstal Node.js secara manual.
+Repository ini berisi kode sumber untuk website portofolio modern yang dibungkus menggunakan **Docker** agar langsung siap dijalankan di komputer mana pun.
 
 ---
 
 ## 🛠️ Prasyarat (Prerequisites)
-
-Sebelum menjalankan proyek ini, pastikan komputer Anda sudah terinstal:
-*   [Docker Desktop](https://docker.com) (Windows/macOS) atau [Docker Engine & Compose](https://docker.com) (Linux Ubuntu/Debian).
+Pastikan komputer Anda sudah terinstal [Docker Desktop](https://docker.com) atau Docker Engine + Compose.
 
 ---
 
 ## 🟢 1. Lingkungan Pengembangan (Development Mode)
+Gunakan mode ini untuk pengkodean sehari-hari dengan fitur *Live Reload* aktif.
 
-Gunakan mode ini untuk melakukan pengkodean sehari-hari. Fitur *Hot Module Replacement (Live Reload)* aktif, sehingga setiap perubahan kode di VS Code akan langsung memperbarui browser secara otomatis.
-
-**Jalankan container development:**
-```bash
-docker compose -f compose.dev.yaml up --build
-```
-*   Aplikasi dapat diakses melalui browser di alamat: **`http://localhost:5173`**
-*   Untuk menghentikan container dev, tekan `Ctrl + C` di terminal, lalu jalankan:
-    ```bash
-    docker compose -f compose.dev.yaml down
-    ```
+*   **Jalankan:** `docker compose -f compose.dev.yaml up --build`
+*   **Akses Browser:** **`http://localhost:5173`**
+*   **Matikan:** `Ctrl + C` lalu jalankan `docker compose -f compose.dev.yaml down`
 
 ---
 
-## 🔵 2. Lingkungan Produksi Lokal (Production Mode / Nginx Web Server)
+## 🔵 2. Lingkungan Produksi Lokal (Production Mode via Nginx)
+Gunakan mode ini untuk melakukan simulasi performa asli website menggunakan web server **Nginx**.
 
-Gunakan mode ini untuk melakukan simulasi performa asli website sebelum di-deploy ke server VPS. Aplikasi akan dikompilasi (*compiled*) menjadi file statis yang super ringan dan disajikan melalui web server **Nginx kelas industri**.
-
-### Opsi A: Jalankan Menggunakan Source Code Lokal (Build dari Nol)
-Jika Anda ingin membangun ulang image dari file lokal di komputer Anda:
-```bash
-docker compose -f compose.prod.yaml up --build -d
-```
-
-### Opsi B: Jalankan Menggunakan Image dari Docker Hub (Tanpa Build)
-Jika Anda ingin langsung mengambil image matang yang sudah di-push ke cloud Docker Hub tanpa memerlukan proses kompilasi lokal:
-*(Pastikan baris `build:` di dalam file `compose.prod.yaml` sudah dikomentari/dihapus)*
-```bash
-docker compose -f compose.prod.yaml up -d
-```
-
-*   Aplikasi Nginx dapat diakses melalui browser di alamat: **`http://localhost:8080`**
-*   Untuk menghentikan container produksi yang berjalan di latar belakang:
-    ```bash
-    docker compose -f compose.prod.yaml down
-    ```
+*   **Jalankan (Build Lokal):** `docker compose -f compose.prod.yaml up --build -d`
+*   **Jalankan (Ambil dari Docker Hub):** `docker compose -f compose.prod.yaml up -d`
+*   **Akses Browser:** **`http://localhost:8080/my-portfolio/`** *(PENTING: Wajib gunakan akhiran /my-portfolio/ agar aplikasi tampil sempurna)*
+*   **Matikan:** `docker compose -f compose.prod.yaml down`
 
 ---
 
-## 🐳 3. Alur Pengiriman ke Docker Hub (Manual Push)
-
-Jika Anda ingin memperbarui image produksi di cloud Docker Hub secara manual, jalankan perintah berikut secara berurutan:
-
-1. **Login ke akun Docker Hub Anda:**
-   ```bash
-   docker login
-   ```
-2. **Build & Push menggunakan Docker Compose:**
-   ```bash
-   docker compose -f compose.prod.yaml build
-   docker compose -f compose.prod.yaml push
-   ```
+## 🐳 3. Push Manual ke Docker Hub
+Jika Anda ingin memperbarui image produksi di cloud Docker Hub Anda secara manual:
+1. `docker login`
+2. `docker compose -f compose.prod.yaml build`
+3. `docker compose -f compose.prod.yaml push`
 
 ---
 
-## 🗂️ Struktur Folder Docker
-```text
-├── docker/
-│   ├── development/
-│   │   └── Dockerfile       # Konfigurasi Node.js + Vite Dev Server
-│   └── production/
-│       ├── Dockerfile       # Multi-stage Build (Node.js -> Nginx)
-│       └── nginx.conf       # Konfigurasi routing SPA Nginx & Gzip
-├── compose.dev.yaml         # Orkestrasi Container Development
-└── compose.prod.yaml        # Orkestrasi Container Production (Nginx)
-```
+## 🗂️ Struktur Docker
+*   `compose.dev.yaml` & `compose.prod.yaml`: Orkestrasi Docker Compose.
+*   `docker/development/`: Lingkungan Node.js + Vite Server.
+*   `docker/production/`: Multi-stage build (Node.js -> Nginx Server).
