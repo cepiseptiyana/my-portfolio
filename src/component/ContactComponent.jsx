@@ -382,7 +382,7 @@ export default function ContactComponent() {
                 <div className="contact-main">
                   <div className="contact-title">
                     <div className="title-1 contact-title-1">Got a project?</div>
-                    <div className="title-2 contact-title-2">Say hello.</div>
+                    <div className="title-2 contact-title-2">Say Hello.</div>
                     <div className="title-desc contact-title-desc">
                       Tell me what you are building and I will get back to you
                       within two days.
@@ -409,7 +409,7 @@ export default function ContactComponent() {
                   <div className="contact-left">
                     <div className="contact-title">
                       <div className="title-1 contact-title-1">Got a project?</div>
-                      <div className="title-2 contact-title-2">Say hello.</div>
+                      <div className="title-2 contact-title-2">Say Hello.</div>
                       <div className="title-desc contact-title-desc">
                         Tell me what you are building and I will get back to
                         you within two days.
