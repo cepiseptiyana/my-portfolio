@@ -57,7 +57,7 @@ function RenderSkillFrontEnd() {
       <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
-      </div>
+      </div>,
     );
   }
 
@@ -109,7 +109,7 @@ function RenderSkillInterface() {
       <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
-      </div>
+      </div>,
     );
   }
 
@@ -157,7 +157,7 @@ function RenderSkillBackEnd() {
       <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
-      </div>
+      </div>,
     );
   }
 
@@ -193,7 +193,7 @@ function RenderSkillDatabase() {
       <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
-      </div>
+      </div>,
     );
   }
 
@@ -244,7 +244,7 @@ function RenderSkillDevops() {
       <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
         <Icon size={28} />
         <span>{skills.name}</span>
-      </div>
+      </div>,
     );
   }
 
@@ -281,7 +281,7 @@ function initMobileAnimation() {
       right: 0,
       duration: 0.7,
     },
-    "+=0.5"
+    "+=0.5",
   );
 
   scrollTrigger.to(".skills-frontEnd", {
@@ -595,13 +595,35 @@ export default function SkillComponent() {
 
               <div className="skills-frontEnd">
                 <div className="center-category">
+                  <div className="wrapper-text">
+                    <div className="title_v1">Techno</div>
+                    <div className="title_v2">Logies</div>
+                    <div className="title_v2">Stacks</div>
+                    <div className="title_desc">
+                      We pride ourselves on staying at the leading edge of
+                      technology. We employ only the latest and most innovative
+                      tech stacks to build robust, scalable, and user-friendly
+                      software solutions for our clients.
+                    </div>
+                  </div>
+                  <div className="wrapper-image">
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/skills.webp`}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="skills-frontEnd">
+                <div className="center-category">
                   {RenderSkillFrontEnd()}
                   {RenderSkillInterface()}
                   {RenderSkillBackEnd()}
                   {RenderSkillDatabase()}
                   {RenderSkillDevops()}
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
 
@@ -626,12 +648,33 @@ export default function SkillComponent() {
                   </p>
                 </div>
 
-                <div className="skills-modern">
+                {/* <div className="skills-modern">
                   {RenderSkillFrontEnd()}
                   {RenderSkillInterface()}
                   {RenderSkillBackEnd()}
                   {RenderSkillDatabase()}
                   {RenderSkillDevops()}
+                </div> */}
+
+                <div className="skills-frontEnd">
+                  <div className="center-category">
+                    <div className="wrapper-text">
+                      <div className="title_v1">Technology</div>
+                      <div className="title_v2">Stacks</div>
+                      <div className="title_desc">
+                        We pride ourselves on staying at the leading edge of
+                        technology. We employ only the latest and most
+                        innovative tech stacks to build robust, scalable, and
+                        user-friendly software solutions for our clients.
+                      </div>
+                    </div>
+                    <div className="wrapper-image">
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/skills.webp`}
+                        alt=""
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="skills-marquee">
