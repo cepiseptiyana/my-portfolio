@@ -600,10 +600,10 @@ export default function SkillComponent() {
                     <div className="title_v2">Logies</div>
                     <div className="title_v2">Stacks</div>
                     <div className="title_desc">
-                      We pride ourselves on staying at the leading edge of
-                      technology. We employ only the latest and most innovative
+                      I pride myself on staying at the leading edge of
+                      technology. I employ only the latest and most innovative
                       tech stacks to build robust, scalable, and user-friendly
-                      software solutions for our clients.
+                      software solutions for my clients.
                     </div>
                   </div>
                   <div className="wrapper-image">
