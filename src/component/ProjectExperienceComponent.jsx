@@ -36,7 +36,41 @@ const projects = [
       "Developed the full-stack architecture using Laravel for secure backend APIs and React for the dynamic interface.",
       "Containerized the application with Docker, running Laravel, MySQL, and the React frontend as isolated services for a consistent development and deployment environment.",
     ],
-    tech: ["Laravel", "MySQL", "React.js", "Docker", "REST API", "JavaScript", "Tailwind/CSS"],
+    tech: [
+      "Laravel",
+      "MySQL",
+      "React.js",
+      "Docker",
+      "REST API",
+      "JavaScript",
+      "Tailwind/CSS",
+    ],
+    link: "",
+  },
+  {
+    year: "2026",
+    title: "Kopi Nusantara Dashboard",
+    role: "UI DESIGN & FRONTEND DEVELOPER",
+    image: `${import.meta.env.BASE_URL}images/dashboard.png`,
+    imageAlt: "Kopi Nusantara coffee shop admin dashboard preview",
+    points: [
+      "Built an admin dashboard for a coffee shop with a sidebar for products, orders, and customers, plus a store overview page.",
+      "Visualized daily revenue and cups sold on a dual-axis line chart with interactive tooltips.",
+      "Added hourly customer traffic as a bar chart and sales by category as a donut chart.",
+      "Designed a warm coffee-toned theme with a consistent card-based layout.",
+    ],
+    tech: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "JWT Jason Web Token",
+      "Ant-Design Library",
+      "Echart Library",
+      "CSS/Tailwind",
+      "Prisma",
+    ],
     link: "",
   },
 ];
@@ -90,13 +124,13 @@ function initMobileAnimation() {
     projectTl.to(
       card,
       { yPercent: 0, duration: 1, ease: "power1.inOut" },
-      `card${index}`
+      `card${index}`,
     );
 
     projectTl.to(
       cards[index - 1],
       { scale: 0.92, opacity: 0.3, yPercent: -3, duration: 1, ease: "none" },
-      `card${index}`
+      `card${index}`,
     );
   });
 
@@ -106,7 +140,7 @@ function initMobileAnimation() {
     ".project-progress-bar",
     { scaleX: 0 },
     { scaleX: 1, ease: "none", duration: projectTl.duration() },
-    0
+    0,
   );
 }
 
@@ -168,14 +202,14 @@ function initDekstopAnimation() {
       ease: "none",
       duration: SCROLL_DURATION,
     },
-    "scroll"
+    "scroll",
   );
 
   projectTl.fromTo(
     ".project-progress-bar",
     { scaleX: 0 },
     { scaleX: 1, ease: "none", duration: SCROLL_DURATION },
-    "scroll"
+    "scroll",
   );
 
   // 4. card aktif saat mendekati tengah layar
@@ -188,13 +222,13 @@ function initDekstopAnimation() {
       projectTl.to(
         card,
         { opacity: 1, scale: 1, duration: 0.6, ease: "none" },
-        `scroll+=${at}`
+        `scroll+=${at}`,
       );
 
       projectTl.to(
         images[index],
         { scale: 1, duration: 0.6, ease: "none" },
-        `scroll+=${at}`
+        `scroll+=${at}`,
       );
     });
   }
@@ -209,8 +243,8 @@ function RenderProjectContent(device) {
   const isMobile = device === "mb";
 
   return projects.map((getData, index) => {
-    const points = isMobile ? getData.points.slice(0, 1) : getData.points;
-    const tech = isMobile ? getData.tech.slice(0, 4) : getData.tech;
+    const points = isMobile ? getData.points.slice(0, 0) : getData.points;
+    const tech = isMobile ? getData.tech.slice(0, 8) : getData.tech;
 
     return (
       <article className="project-card" key={index}>
