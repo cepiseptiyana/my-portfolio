@@ -364,3 +364,37 @@
                                 color: g.$lime
                                 text-decoration: none
                                 border-bottom: 1px solid g.$lime
+
+
+.project-head
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.project-link-btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  border: 1px solid currentColor
+  color: inherit
+  text-decoration: none
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease
+
+  svg
+    transition: transform 0.25s ease
+
+  &:hover:not(.is-disabled)
+    background: currentColor
+    transform: scale(1.08)
+
+    svg
+      transform: translate(2px, -2px)
+      // warna ikon dibalik biar tetap terlihat di atas background
+      color: #000
+
+  &.is-disabled
+    opacity: 0.3
+    cursor: not-allowed

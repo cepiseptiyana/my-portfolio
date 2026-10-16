@@ -24,7 +24,7 @@ const projects = [
       "Deployed with a clean Git workflow.",
     ],
     tech: ["React.js", "GSAP", "SASS", "Git", "Github"],
-    link: "",
+    link: "https://github.com/cepiseptiyana/my-portfolio",
   },
   {
     year: "2025",
@@ -45,7 +45,7 @@ const projects = [
       "JavaScript",
       "Tailwind/CSS",
     ],
-    link: "",
+    link: "https://github.com/cepiseptiyana/job_career",
   },
   {
     year: "2026",
@@ -56,8 +56,6 @@ const projects = [
     points: [
       "Built an admin dashboard for a coffee shop with a sidebar for products, orders, and customers, plus a store overview page.",
       "Visualized daily revenue and cups sold on a dual-axis line chart with interactive tooltips.",
-      "Added hourly customer traffic as a bar chart and sales by category as a donut chart.",
-      "Designed a warm coffee-toned theme with a consistent card-based layout.",
     ],
     tech: [
       "Next.js",
@@ -71,7 +69,7 @@ const projects = [
       "CSS/Tailwind",
       "Prisma",
     ],
-    link: "",
+    link: "https://github.com/cepiseptiyana/dashboard-coffee",
   },
 ];
 
@@ -239,6 +237,25 @@ function initDekstopAnimation() {
 /* =====================
    RENDER CARD
 ===================== */
+function ArrowIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M7 17L17 7" />
+      <path d="M8 7h9v9" />
+    </svg>
+  );
+}
+
 function RenderProjectContent(device) {
   const isMobile = device === "mb";
 
@@ -251,6 +268,26 @@ function RenderProjectContent(device) {
         <div className="project-content">
           <div className="project-head">
             <span className="project-year">{getData.year}</span>
+
+            {getData.link ? (
+              <a
+                className="project-link-btn"
+                href={getData.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${getData.title}`}
+              >
+                <ArrowIcon />
+              </a>
+            ) : (
+              <span
+                className="project-link-btn is-disabled"
+                aria-disabled="true"
+                title="Link coming soon"
+              >
+                <ArrowIcon />
+              </span>
+            )}
           </div>
 
           <div className="title-project">{getData.title}</div>
@@ -275,17 +312,6 @@ function RenderProjectContent(device) {
               </div>
             ))}
           </div>
-
-          {getData.link && (
-            <a
-              className="project-link"
-              href={getData.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View project
-            </a>
-          )}
         </div>
       </article>
     );
