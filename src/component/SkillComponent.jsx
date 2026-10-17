@@ -1,263 +1,10 @@
-import {
-  Code2,
-  Github,
-  Layers3,
-  Sparkles,
-  FileCode2,
-  Braces,
-  Palette,
-  Database,
-  Server,
-  GitBranch,
-  Container,
-  Terminal,
-} from "lucide-react";
 import "../styles/skill_component.sass";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useDevice from "../hooks/useDevice";
 
 gsap.registerPlugin(ScrollTrigger);
-
-function RenderSkillFrontEnd() {
-  let element = [];
-
-  const skill_frontEnd = [
-    {
-      name: "React.js",
-      icon: Code2,
-    },
-    {
-      name: "Next.js",
-      icon: Layers3,
-    },
-    {
-      name: "JavaScript",
-      icon: Braces,
-    },
-    {
-      name: "TypeScript",
-      icon: FileCode2,
-    },
-    {
-      name: "HTML",
-      icon: FileCode2,
-    },
-    {
-      name: "CSS",
-      icon: Palette,
-    },
-  ];
-
-  for (const [index, skills] of skill_frontEnd.entries()) {
-    const Icon = skills.icon;
-
-    element.push(
-      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
-        <Icon size={28} />
-        <span>{skills.name}</span>
-      </div>,
-    );
-  }
-
-  return (
-    <div className="skill-category skill-category-1">
-      <div className="skill-content">
-        <div className="title-1">Front end</div>
-        <div className="title-2">Development</div>
-        <div className="skill-list">{element}</div>
-      </div>
-    </div>
-  );
-}
-
-function RenderSkillInterface() {
-  let element = [];
-
-  const skill_interface = [
-    {
-      name: "GSAP",
-      icon: Sparkles,
-    },
-    {
-      name: "Swiper",
-      icon: Layers3,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: Palette,
-    },
-    {
-      name: "Bootstrap",
-      icon: Palette,
-    },
-    {
-      name: "Ant Design",
-      icon: Layers3,
-    },
-    {
-      name: "Responsive Design",
-      icon: Code2,
-    },
-  ];
-
-  for (const [index, skills] of skill_interface.entries()) {
-    const Icon = skills.icon;
-
-    element.push(
-      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
-        <Icon size={28} />
-        <span>{skills.name}</span>
-      </div>,
-    );
-  }
-
-  return (
-    <div className="skill-category skill-category-2">
-      <div className="skill-content">
-        <div className="title-1">Interface &</div>
-        <div className="title-2">Animation</div>
-        <div className="skill-list">{element}</div>
-      </div>
-    </div>
-  );
-}
-
-function RenderSkillBackEnd() {
-  let element = [];
-
-  const skill_backend = [
-    {
-      name: "Laravel",
-      icon: Server,
-    },
-    {
-      name: "PHP",
-      icon: FileCode2,
-    },
-    {
-      name: "Node.js",
-      icon: Server,
-    },
-    {
-      name: "Express.js",
-      icon: Server,
-    },
-    {
-      name: "REST API",
-      icon: Braces,
-    },
-  ];
-
-  for (const [index, skills] of skill_backend.entries()) {
-    const Icon = skills.icon;
-
-    element.push(
-      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
-        <Icon size={28} />
-        <span>{skills.name}</span>
-      </div>,
-    );
-  }
-
-  return (
-    <div className="skill-category skill-category-3">
-      <div className="skill-content">
-        <div className="title-1">Backend</div>
-        <div className="title-2">Development</div>
-        <div className="skill-list">{element}</div>
-      </div>
-    </div>
-  );
-}
-
-function RenderSkillDatabase() {
-  let element = [];
-
-  const skill_database = [
-    {
-      name: "MySQL",
-      icon: Database,
-    },
-    {
-      name: "PostgreSQL",
-      icon: Database,
-    },
-  ];
-
-  for (const [index, skills] of skill_database.entries()) {
-    const Icon = skills.icon;
-
-    element.push(
-      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
-        <Icon size={28} />
-        <span>{skills.name}</span>
-      </div>,
-    );
-  }
-
-  return (
-    <div className="skill-category skill-category-4">
-      <div className="skill-content">
-        <div className="title-1">Database</div>
-        <div className="skill-list">{element}</div>
-      </div>
-    </div>
-  );
-}
-
-function RenderSkillDevops() {
-  let element = [];
-
-  const skill_devops = [
-    {
-      name: "Git",
-      icon: GitBranch,
-    },
-    {
-      name: "GitHub",
-      icon: Github,
-    },
-    {
-      name: "Jenkins",
-      icon: Terminal,
-    },
-    {
-      name: "Docker",
-      icon: Container,
-    },
-    {
-      name: "Linux",
-      icon: Terminal,
-    },
-    {
-      name: "Apache",
-      icon: Server,
-    },
-  ];
-
-  for (const [index, skills] of skill_devops.entries()) {
-    const Icon = skills.icon;
-
-    element.push(
-      <div className={`skill-item skill-item-${index + 1}`} key={skills.name}>
-        <Icon size={28} />
-        <span>{skills.name}</span>
-      </div>,
-    );
-  }
-
-  return (
-    <div className="skill-category skill-category-5">
-      <div className="skill-content">
-        <div className="title-1">DEVOPS &</div>
-        <div className="title-2">TOOLS</div>
-        <div className="skill-list">{element}</div>
-      </div>
-    </div>
-  );
-}
 
 function initMobileAnimation() {
   const scrollTrigger = gsap.timeline({
@@ -545,7 +292,7 @@ export default function SkillComponent() {
     }, root_skills);
 
     return () => ctx.revert();
-  }, []);
+  }, [device]);
 
   return (
     <div ref={root_skills}>
@@ -600,10 +347,11 @@ export default function SkillComponent() {
                     <div className="title_v2">Logies</div>
                     <div className="title_v2">Stacks</div>
                     <div className="title_desc">
-                      I pride myself on staying at the leading edge of
-                      technology. I employ only the latest and most innovative
-                      tech stacks to build robust, scalable, and user-friendly
-                      software solutions for my clients.
+                      Equipped with a solid foundation in front-end
+                      technologies, I am actively expanding my expertise into
+                      full-stack development. I combine modern frameworks with
+                      reliable backend tools to deliver seamless and efficient
+                      digital solutions.
                     </div>
                   </div>
                   <div className="wrapper-image">
@@ -614,16 +362,6 @@ export default function SkillComponent() {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="skills-frontEnd">
-                <div className="center-category">
-                  {RenderSkillFrontEnd()}
-                  {RenderSkillInterface()}
-                  {RenderSkillBackEnd()}
-                  {RenderSkillDatabase()}
-                  {RenderSkillDevops()}
-                </div>
-              </div> */}
             </div>
           )}
 
@@ -648,24 +386,17 @@ export default function SkillComponent() {
                   </p>
                 </div>
 
-                {/* <div className="skills-modern">
-                  {RenderSkillFrontEnd()}
-                  {RenderSkillInterface()}
-                  {RenderSkillBackEnd()}
-                  {RenderSkillDatabase()}
-                  {RenderSkillDevops()}
-                </div> */}
-
                 <div className="skills-frontEnd">
                   <div className="center-category">
                     <div className="wrapper-text">
                       <div className="title_v1">Technology</div>
                       <div className="title_v2">Stacks</div>
                       <div className="title_desc">
-                        We pride ourselves on staying at the leading edge of
-                        technology. We employ only the latest and most
-                        innovative tech stacks to build robust, scalable, and
-                        user-friendly software solutions for our clients.
+                        Equipped with a solid foundation in front-end
+                        technologies, I am actively expanding my expertise into
+                        full-stack development. I combine modern frameworks with
+                        reliable backend tools to deliver seamless and efficient
+                        digital solutions.
                       </div>
                     </div>
                     <div className="wrapper-image">

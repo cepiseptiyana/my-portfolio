@@ -69,7 +69,7 @@ function RenderExperienceContent() {
         <div className="wraper-experience-point" key={index}>
           <span>●</span>
           <div className="decs-experience-point">{getExperiencePoints}</div>
-        </div>
+        </div>,
       );
     }
   }
@@ -83,7 +83,7 @@ function RenderExperienceContent() {
       element_experience_tech.push(
         <div className="desc-experience-tech" key={index}>
           {getDataExperienceTech}
-        </div>
+        </div>,
       );
     }
   }
@@ -102,7 +102,7 @@ function RenderExperienceContent() {
           <div className="title-technology">Technology</div>
           <div className="experience-tech">{element_experience_tech}</div>
         </div>
-      </article>
+      </article>,
     );
   }
 
@@ -110,8 +110,8 @@ function RenderExperienceContent() {
 }
 
 export default function ExperienceComponent() {
-  const root_experience = useRef(null);
   const device = useDevice();
+  const root_experience = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -125,7 +125,7 @@ export default function ExperienceComponent() {
     }, root_experience);
 
     return () => ctx.revert();
-  }, []);
+  }, [device]);
 
   return (
     <div ref={root_experience}>

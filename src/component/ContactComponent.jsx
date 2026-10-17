@@ -11,14 +11,28 @@ const contactData = {
   email: "cepifams3@gmail.com",
   marquee: "Available for work ✦ Let's talk ✦ ",
   info: [
-    { label: "Email", value: "cepifams3@gmail.com", href: "mailto:cepifams3@gmail.com" },
+    {
+      label: "Email",
+      value: "cepifams3@gmail.com",
+      href: "mailto:cepifams3@gmail.com",
+    },
     { label: "Based in", value: "Tangerang, Indonesia", href: "" },
-    { label: "Status", value: "Open for freelance & full-time", href: "", live: true },
+    {
+      label: "Status",
+      value: "Open for freelance & full-time",
+      href: "",
+      live: true,
+    },
   ],
   fields: [
     { name: "name", label: "Your name", tag: "input", type: "text" },
     { name: "email", label: "Your email", tag: "input", type: "email" },
-    { name: "message", label: "Tell me about your project", tag: "textarea", type: "" },
+    {
+      name: "message",
+      label: "Tell me about your project",
+      tag: "textarea",
+      type: "",
+    },
   ],
 };
 
@@ -72,8 +86,14 @@ function initMagneticButton() {
   const btn = gsap.utils.toArray(".contact-submit")[0];
   if (!btn) return () => {};
 
-  const moveX = gsap.quickTo(btn, "x", { duration: 0.8, ease: "elastic.out(1, 0.4)" });
-  const moveY = gsap.quickTo(btn, "y", { duration: 0.8, ease: "elastic.out(1, 0.4)" });
+  const moveX = gsap.quickTo(btn, "x", {
+    duration: 0.8,
+    ease: "elastic.out(1, 0.4)",
+  });
+  const moveY = gsap.quickTo(btn, "y", {
+    duration: 0.8,
+    ease: "elastic.out(1, 0.4)",
+  });
 
   const onMove = (e) => {
     const rect = btn.getBoundingClientRect();
@@ -99,7 +119,7 @@ function initLiveDot() {
   gsap.fromTo(
     ".contact-dot-pulse",
     { scale: 1, opacity: 0.6 },
-    { scale: 2.6, opacity: 0, duration: 1.4, repeat: -1, ease: "power1.out" }
+    { scale: 2.6, opacity: 0, duration: 1.4, repeat: -1, ease: "power1.out" },
   );
 }
 
@@ -118,7 +138,7 @@ function initMobileAnimation() {
         end: "bottom top",
         scrub: 1,
       },
-    }
+    },
   );
 
   const contactTl = gsap.timeline({
@@ -134,7 +154,7 @@ function initMobileAnimation() {
   contactTl.fromTo(
     ".contact-title-1",
     { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
+    { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
   );
 
   contactTl.to(split.chars, {
@@ -147,19 +167,31 @@ function initMobileAnimation() {
   contactTl.fromTo(
     ".contact-info-item",
     { clipPath: "inset(0% 0% 100% 0%)", y: 20 },
-    { clipPath: "inset(0% 0% 0% 0%)", y: 0, duration: 0.5, stagger: 0.15, ease: "power2.out" }
+    {
+      clipPath: "inset(0% 0% 0% 0%)",
+      y: 0,
+      duration: 0.5,
+      stagger: 0.15,
+      ease: "power2.out",
+    },
   );
 
   contactTl.fromTo(
     ".contact-field",
     { clipPath: "inset(0% 100% 0% 0%)", opacity: 0 },
-    { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 0.6, stagger: 0.2, ease: "power2.out" }
+    {
+      clipPath: "inset(0% 0% 0% 0%)",
+      opacity: 1,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out",
+    },
   );
 
   contactTl.fromTo(
     ".contact-submit",
     { scale: 0.6, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }
+    { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" },
   );
 
   initLiveDot();
@@ -186,7 +218,7 @@ function initDekstopAnimation() {
   contactTl.fromTo(
     ".contact-title-1",
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+    { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" },
   );
 
   contactTl.to(split.chars, {
@@ -200,20 +232,32 @@ function initDekstopAnimation() {
     ".contact-title-desc",
     { y: 30, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" },
-    "<+0.3"
+    "<+0.3",
   );
 
   contactTl.fromTo(
     ".contact-info-item",
     { clipPath: "inset(0% 0% 100% 0%)", y: 30 },
-    { clipPath: "inset(0% 0% 0% 0%)", y: 0, duration: 0.6, stagger: 0.2, ease: "power2.out" }
+    {
+      clipPath: "inset(0% 0% 0% 0%)",
+      y: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out",
+    },
   );
 
   contactTl.fromTo(
     ".contact-field",
     { clipPath: "inset(0% 100% 0% 0%)", opacity: 0 },
-    { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 0.7, stagger: 0.25, ease: "power2.out" },
-    "<+0.2"
+    {
+      clipPath: "inset(0% 0% 0% 0%)",
+      opacity: 1,
+      duration: 0.7,
+      stagger: 0.25,
+      ease: "power2.out",
+    },
+    "<+0.2",
   );
 
   contactTl.to(".contact-submit", {
@@ -229,7 +273,7 @@ function initDekstopAnimation() {
     ".contact-marquee-track",
     { xPercent: 0 },
     { xPercent: -50, ease: "none", duration: contactTl.duration() },
-    0
+    0,
   );
 
   initLiveDot();
@@ -264,7 +308,7 @@ function RenderElement(fields) {
           required
         />
         <span className="contact-field-line" />
-      </div>
+      </div>,
     );
   }
 
@@ -294,7 +338,7 @@ function RenderInfoElement(info) {
           {item.label}
         </div>
         {value}
-      </div>
+      </div>,
     );
   }
 
@@ -329,15 +373,17 @@ export default function ContactComponent() {
     e.preventDefault();
 
     const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(`Project inquiry from ${data.get("name")}`);
+    const subject = encodeURIComponent(
+      `Project inquiry from ${data.get("name")}`,
+    );
     const body = encodeURIComponent(
-      `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`
+      `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`,
     );
 
     gsap.fromTo(
       status.current,
       { y: 10, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" },
     );
 
     window.location.href = `mailto:${contactData.email}?subject=${subject}&body=${body}`;
@@ -381,7 +427,9 @@ export default function ContactComponent() {
               <div className="center-container">
                 <div className="contact-main">
                   <div className="contact-title">
-                    <div className="title-1 contact-title-1">Got a project?</div>
+                    <div className="title-1 contact-title-1">
+                      Got a project?
+                    </div>
                     <div className="title-2 contact-title-2">Say Hello.</div>
                     <div className="title-desc contact-title-desc">
                       Tell me what you are building and I will get back to you
@@ -408,11 +456,13 @@ export default function ContactComponent() {
                 <div className="contact-main">
                   <div className="contact-left">
                     <div className="contact-title">
-                      <div className="title-1 contact-title-1">Got a project?</div>
+                      <div className="title-1 contact-title-1">
+                        Got a project?
+                      </div>
                       <div className="title-2 contact-title-2">Say Hello.</div>
                       <div className="title-desc contact-title-desc">
-                        Tell me what you are building and I will get back to
-                        you within two days.
+                        Tell me what you are building and I will get back to you
+                        within two days.
                       </div>
                     </div>
 

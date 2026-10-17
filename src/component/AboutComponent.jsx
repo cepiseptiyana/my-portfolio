@@ -90,7 +90,7 @@ function initMobileAnimation() {
       left: "0%",
       duration: 0.3,
     },
-    "+=0.3"
+    "+=0.3",
   );
 
   aboutScrollTl.to(
@@ -99,7 +99,7 @@ function initMobileAnimation() {
       left: "150%",
       duration: 0.3,
     },
-    "+=1"
+    "+=1",
   );
 
   aboutScrollTl.to(".wraper-image", {
@@ -117,7 +117,7 @@ function initMobileAnimation() {
       ease: "none",
       duration: 4,
     },
-    "+=0.2"
+    "+=0.2",
   );
 
   aboutScrollTl.to(
@@ -126,7 +126,7 @@ function initMobileAnimation() {
       top: "-304%",
       duration: 4,
     },
-    "+=2"
+    "+=2",
   );
 
   aboutScrollTl.to(".arrow_bottom", {
@@ -143,7 +143,7 @@ function initMobileAnimation() {
       duration: 1,
       ease: "none",
     },
-    "+=0.5"
+    "+=0.5",
   );
 
   aboutScrollTl.to(".arrow_bottom", {
@@ -207,7 +207,7 @@ function initDesktopAnimation() {
       duration: 0.7,
       transformOrigin: "right top",
     },
-    0
+    0,
   );
 
   aboutScrollTl.to(
@@ -217,7 +217,7 @@ function initDesktopAnimation() {
       backgroundColor: "#d8ff36",
       color: "black",
     },
-    0
+    0,
   );
 }
 
@@ -237,7 +237,7 @@ export default function AboutComponent() {
     }, root_about);
 
     return () => ctx.revert();
-  }, []);
+  }, [device]);
 
   return (
     <div ref={root_about}>
@@ -264,7 +264,7 @@ export default function AboutComponent() {
                       <a
                         href={`${
                           import.meta.env.BASE_URL
-                        }cv/Cepi_Septiyana_Junior_Fullstack_Developer_CV.pdf`}
+                        }cv/cepi_septiyana_fullstack_developer.pdf`}
                         download="cv_cepi_septiyana.pdf"
                         className="resume-btn"
                       >
@@ -272,12 +272,13 @@ export default function AboutComponent() {
                       </a>
 
                       <div className="desc-about">
-                        I am a Junior Web Developer with professional experience
-                        as a Front-End Engineer, focused on building responsive
-                        web applications. I work with React.js, Vue.js, Next.js,
-                        and JavaScript, with experience integrating REST APIs. I
-                        am also expanding my skills in back-end development with
-                        Node.js, Express.js, Laravel, and SQL databases.
+                        Junior Web Developer & Front-End Engineer experienced in
+                        building responsive web applications using React.js,
+                        Vue.js, Next.js, and JavaScript. Skilled in REST API
+                        integration, I am actively expanding into Full-Stack
+                        Development with Node.js, Express.js, Laravel, and SQL.
+                        I am deeply committed to writing clean, interactive, and
+                        highly maintainable code.
                       </div>
 
                       <div className="arrow_bottom">
@@ -333,20 +334,13 @@ export default function AboutComponent() {
                       </a>
 
                       <div className="desc-about">
-                        I am a Junior Web Developer with professional experience
-                        as a Front-End Engineer, focused on building web
-                        applications and responsive user interfaces.
-                      </div>
-
-                      <div className="desc-about-2">
-                        I have experience working with React.js, Vue.js,
-                        Next.js, and JavaScript, as well REST API integration
-                        and database management. With a strong interest in
-                        Full-Stack Development, I am expanding my skills in
-                        back-end technologies such as Node.js, Express.js,
-                        Laravel, and SQL databases. I enjoy building clean,
-                        interactive, and maintainable applications while
-                        continuously learning and improving as a developer.
+                        Junior Web Developer & Front-End Engineer experienced in
+                        building responsive web applications using React.js,
+                        Vue.js, Next.js, and JavaScript. Skilled in REST API
+                        integration, I am actively expanding into Full-Stack
+                        Development with Node.js, Express.js, Laravel, and SQL.
+                        I am deeply committed to writing clean, interactive, and
+                        highly maintainable code.
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useDevice from "../hooks/useDevice";
 import "../styles/hero_component.sass";
 
@@ -39,7 +39,7 @@ function initMobileAnimation() {
       },
       ease: "none",
     },
-    0
+    0,
   );
 
   return heroScrollTl;
@@ -76,7 +76,7 @@ function initDesktopAnimation() {
       },
       ease: "none",
     },
-    0
+    0,
   );
 
   return heroScrollTl;
@@ -124,7 +124,7 @@ export default function HeroComponent() {
     }, root_hero);
 
     return () => ctx.revert();
-  }, []);
+  }, [device]);
 
   return (
     <div ref={root_hero}>
@@ -194,8 +194,6 @@ export default function HeroComponent() {
             </div>
           )}
         </div>
-
-        {/* <ComponentWave className="wave-hero" /> */}
       </section>
     </div>
   );
