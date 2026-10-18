@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useRef } from "react";
 import "./styles/navbar_component.sass";
 
 import HeroComponent from "./component/HeroComponent";
@@ -19,16 +18,6 @@ export default function App() {
         <a className="brand" href="#home">
           CEPI<span>®</span>
         </a>
-
-        {/* <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
-        </div> */}
-
-        {/* <a className="nav-dot" href="#contact">
-          Let's talk <span>↗</span>
-        </a> */}
       </nav>
 
       <main>
@@ -37,10 +26,10 @@ export default function App() {
         <SkillComponent />
         <ExperienceComponent />
         <ProjectExperienceComponent />
-        <ContactComponent/>
+        <ContactComponent />
       </main>
 
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }

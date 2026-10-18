@@ -7,9 +7,6 @@ import useDevice from "../hooks/useDevice";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-/* =====================
-   DATA (ganti dengan project kamu)
-===================== */
 const projects = [
   {
     year: "2026",
@@ -73,9 +70,6 @@ const projects = [
   },
 ];
 
-/* =====================
-   HELPERS
-===================== */
 function splitTitle() {
   const split = new SplitText(".project-title-2", {
     type: "chars",
@@ -86,10 +80,6 @@ function splitTitle() {
   return split;
 }
 
-/* =====================
-   MOBILE ANIMATION
-   Card ditumpuk, tiap scroll card berikutnya naik menutupi card sebelumnya
-===================== */
 function initMobileAnimation() {
   const cards = gsap.utils.toArray(".project-card");
   const split = splitTitle();
@@ -142,10 +132,6 @@ function initMobileAnimation() {
   );
 }
 
-/* =====================
-   DESKTOP ANIMATION
-   Section di-pin, track card bergeser horizontal mengikuti scroll
-===================== */
 function initDekstopAnimation() {
   const track = gsap.utils.toArray(".project-track")[0];
   const cards = gsap.utils.toArray(".project-card");
@@ -170,7 +156,6 @@ function initDekstopAnimation() {
     },
   });
 
-  // 1. judul muncul per huruf
   projectTl.to(split.chars, {
     opacity: 1,
     duration: 0.3,
@@ -178,7 +163,6 @@ function initDekstopAnimation() {
     ease: "none",
   });
 
-  // 2. card naik satu per satu (card pertama langsung aktif)
   projectTl.to(cards, {
     y: 0,
     opacity: (i) => (i === 0 ? 1 : 0.35),
@@ -189,10 +173,7 @@ function initDekstopAnimation() {
   });
 
   projectTl.to(images[0], { scale: 1, duration: 0.6, ease: "none" }, "<");
-
-  // 3. track bergeser horizontal + progress bar
   projectTl.addLabel("scroll", "+=0.3");
-
   projectTl.to(
     track,
     {
@@ -202,7 +183,6 @@ function initDekstopAnimation() {
     },
     "scroll",
   );
-
   projectTl.fromTo(
     ".project-progress-bar",
     { scaleX: 0 },
@@ -210,7 +190,6 @@ function initDekstopAnimation() {
     "scroll",
   );
 
-  // 4. card aktif saat mendekati tengah layar
   if (cards.length > 1) {
     cards.forEach((card, index) => {
       if (index === 0) return;
